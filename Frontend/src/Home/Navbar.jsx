@@ -11,10 +11,10 @@ const Navbar = () => {
                 <NavLink className='text-[#19354D] font-bold ' to='/jobseeker'>Job seeker</NavLink>
             </div>
             <div className='flex gap-5'>
-                <button className='  rounded text-[#19354D] px-4 py-2 bg-[#76BEE9] font-semibold'>Login</button>
-                <button className='  rounded text-[#19354D] px-4 py-2 bg-[#76BEE9] font-semibold'>Signup</button>
-
-
+                {/* <button className='  rounded text-[#19354D] px-4 py-2 bg-[#76BEE9] font-semibold'>Login</button>
+                <button className='  rounded text-[#19354D] px-4 py-2 bg-[#76BEE9] font-semibold'>Signup</button> */}
+                <button>Login</button>
+                <button>Signup</button>
             </div>
 
         </div>
