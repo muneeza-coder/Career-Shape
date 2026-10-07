@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* button {
+  padding: 1em 2em;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  isolation: isolate;
+}
+
+button::after {
+  content: '';
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  height: 107%;
+  width: 102%;
+  transform: translate(-50%, -50%);
+  border-radius: 1000px;
+  background-image: linear-gradient(to bottom right, #397CB3, #76BEE9, #19354D, #295B79);
+  z-index: -1;
+} */
+/* @import "tailwindcss";
+
+button {
+  padding: 1em 2em;
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 1000px;
+
+  background: linear-gradient(to bottom right,
+      D64045,
+      #295B79);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+} */
+button {
+  box-shadow: 0 0 10px #397CB3,
+    0 0 20px #76BEE9,
+    0 0 35px #19354D;
+}
