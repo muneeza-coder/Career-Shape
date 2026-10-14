@@ -107,7 +107,10 @@ button:hover {
 } */
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+}
 
-body {
-  font-family: 'Manrope', sans-serif;
+button {
+  cursor: pointer;
 }

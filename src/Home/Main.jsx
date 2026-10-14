@@ -5,17 +5,13 @@ import Jobseekerhome from './Jobseekerhome'
 import Homeslider from './Homeslider'
 
 const Main = () => {
-    function Slider() {
-        const [silder, setsilder] = useState(0)
 
-    }
     return (
 
         <div
-            className='w-full flex flex-col '>
+            className='w-full flex flex-col mx-auto '>
             <Navbar />
             <Homeslider />
-
         </div>
     )
 }
