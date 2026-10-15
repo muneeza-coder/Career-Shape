@@ -57,7 +57,7 @@ const Homeslider = () => {
         return () => clearInterval(timer)
     }, [])
     return (
-        <div className='ml-8 mr-8  mt-40 overflow-hidden sm:mt-50 sm:ml-20 xl:ml-60 lg:ml-30'>
+        <div className='ml-8 mr-8  mt-40 overflow-hidden sm:mt-50 sm:ml-20 xl:ml-60 lg:ml-30 '>
             <div className='flex transition-transform duration-500' style={{ transform: `translateX(-${slide * 100}%)` }}>
                 <div className='min-w-full'><ComanyHome /></div>
                 <div className='min-w-full'><Jobseekerhome /></div>
