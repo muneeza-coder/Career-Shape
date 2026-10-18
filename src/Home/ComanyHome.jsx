@@ -319,6 +319,33 @@
 // }
 
 // export default ComanyHome
+// import React from 'react'
+// import CompanycardHero from './CompanycardHero'
+// import JobseekerCardHero from './JobseekerCardHero'
+
+// const ComanyHome = () => {
+//     return (
+
+//         //for mobiles  ml-48 mr-48
+//         <div className=' w-[full] lg:flex '>
+//             <div className=' flex flex-col lg:mr-10 xl:mr-12'>
+//                 {/* <h6 className='w-[13vh] bg-[#E8ECFF]  text-[#3D5AFE] sm:w-[17vh]  text-[10] leading-none text-sm px-2 py-1 rounded-full flex justify-center font-semibold mb-5'>For companies</h6> */}
+//                 <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] w-[19vh]  min-[393px]:w-[16vh] text-sm px-2 py-1 rounded-full flex justify-center font-semibold mb-5'>For companies</h6>
+//                 {/* <h1 className=' text-2xl sm:w-[30vh] xl:w-full w-[37vh] lg:w-[90vh] lg:text-5xl mr-5 sm:mr-0 font-extrabold sm:text-3xl xl:text-5xl sm:font-extrabold text-[#1B2340] xl:leading-14 sm:leading-10 flex flex-wrap lg:leading-12'>Shape your team around the right people</h1> */}
+//                 <h1 className=' min-[375px]:w-[44vh] w-[45vh] min-[360px]:w-[37vh] md:w-full font-extrabold text-5xl  min-[393px]:w-[38vh] lg:w-[34vh]   text-[#1B2340] flex flex-wrap xl:w-[60vh]  2xl:w-[70vh] 2xl:text-6xl'>Shape your team around the right people</h1>
+
+//                 <p className='text-[#6B7391] mt-5  min-[412px]:w-[35vh] min-[375px]:w-[44vh] md:w-[55vh] min-[360px]:w-[37vh] w-[45vh] lg:w-[30vh]   min-[393px]:w-[38vh] flex flex-wrap md:text-xl xl:w-[60vh] 2xl:w-[70vh]'>Career Shape helps small teams post jobs, track candidates and see who fits best, uisng AI skill matching</p>
+//                 <div className='mt-7 flex gap-2'>
+//                     <button className='bg-[#E8ECFF] min-[360px]:px-3  text-[#3D5AFE] px-6 py-3  rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95 '>Start hiring</button>
+//                     <button className=' bg-[#E8ECFF]  text-[#3D5AFE]  min-[360px]:px-3 px-6 py-3 rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95'>See how it works</button>
+//                 </div>
+//             </div>
+//             <CompanycardHero />
+//         </div>
+//     )
+// }
+
+// export default ComanyHome
 import React from 'react'
 import CompanycardHero from './CompanycardHero'
 import JobseekerCardHero from './JobseekerCardHero'
@@ -327,22 +354,19 @@ const ComanyHome = () => {
     return (
 
         //for mobiles  ml-48 mr-48
-        <div className=' w-[full] '>
-            <div className=' flex flex-col '>
-                {/* <h6 className='w-[13vh] bg-[#E8ECFF]  text-[#3D5AFE] sm:w-[17vh]  text-[10] leading-none text-sm px-2 py-1 rounded-full flex justify-center font-semibold mb-5'>For companies</h6> */}
-                <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] w-[18vh] min-[393px]:w-[15vh] text-sm px-2 py-1 rounded-full flex justify-center font-semibold mb-5'>For companies</h6>
-                {/* <h1 className=' text-2xl sm:w-[30vh] xl:w-full w-[37vh] lg:w-[90vh] lg:text-5xl mr-5 sm:mr-0 font-extrabold sm:text-3xl xl:text-5xl sm:font-extrabold text-[#1B2340] xl:leading-14 sm:leading-10 flex flex-wrap lg:leading-12'>Shape your team around the right people</h1> */}
-                <h1 className=' min-[375px]:w-[44vh] w-[45vh] min-[360px]:w-[37vh] font-extrabold text-4xl  min-[393px]:w-[38vh]  text-[#1B2340] flex flex-wrap'>Shape your team around the right people</h1>
+        <div className=' w-[full]  flex flex-col justify-center md:flex-row md:justify-between '>
+            <div className='flex flex-col lg:mr-10 xl:mr-12 md:mr-5'>
+                <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] text-sm px-2 py-1 rounded-full max-w-32 font-semibold mb-5 flex justify-center '>For companies</h6>
+                <h1 className=' font-extrabold text-5xl  text-[#1B2340] flex flex-wrap sm:max-w-4xl md:max-w-2xl  md:text-6xl '>Shape your team around the right people</h1>
 
-                <p className='text-[#6B7391] mt-5  min-[412px]:w-[35vh] min-[375px]:w-[44vh] min-[360px]:w-[37vh] w-[45vh] min-[393px]:w-[38vh] flex flex-wrap'>Career Shape helps small teams post jobs, track candidates and see who fits best, uisng AI skill matching</p>
+                <p className='text-[#6B7391] sm:max-w-4xl md:max-w-xl mt-5 flex flex-wrap'>Career Shape helps small teams post jobs, track candidates and see who fits best, using AI skill matching</p>
                 <div className='mt-7 flex gap-2'>
                     <button className='bg-[#E8ECFF] min-[360px]:px-3  text-[#3D5AFE] px-6 py-3  rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95 '>Start hiring</button>
-                    <button className=' bg-[#E8ECFF]  text-[#3D5AFE]  min-[360px]:px-3 px-6 py-3 rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95'>See how it works</button>
+                    <button className=' bg-[#E8ECFF]  text-[#3D5AFE]   px-5 py-3 rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95'>See how it works</button>
                 </div>
             </div>
             <CompanycardHero />
         </div>
     )
 }
-
 export default ComanyHome

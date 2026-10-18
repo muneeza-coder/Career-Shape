@@ -114,3 +114,7 @@ button:hover {
 button {
   cursor: pointer;
 }
+
+/* .wrapperslider {
+  touch-action: none;
+} */

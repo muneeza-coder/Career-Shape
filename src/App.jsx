@@ -103,7 +103,7 @@ const App = () => {
   return (
 
     <div
-      className='flex flex-col h-full w-full bg-[#F5F6FA] '>
+      className='flex flex-col h-full w-full '>
       <Main />
       <Routes>
         <Route path='/' element={<Home />} />
