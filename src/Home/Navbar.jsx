@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo1.svg'
 import { X, Menu } from 'lucide-react'
 import { useState } from 'react'
+import Footer from './Footer'
 const Navbar = () => {
     const [activebtn, setactivebtn] = useState('signup')
     const [menuopen, setmenuopen] = useState(false)
@@ -11,7 +12,7 @@ const Navbar = () => {
         // <nav className='px-2 2xl:pl-50 2xl:pr-60 xl:pl-41 xl:pr-36 py-3 backdrop-blur-md bg-[#F5F6FA]/[90%] items-center flex justify-between border-b-2 border-gray-200 fixed left-0 top-0 w-full z-50 lg:pl-8 lg:pr-10 md:pl-10 md:pr-10.5'>
         <nav className='px-2 2xl:pl-50 2xl:pr-60 xl:pl-41 xl:pr-36 py-3 backdrop-blur-md bg-[#F5F6FA]/[90%] items-center flex justify-between border-b-2 border-gray-200 fixed left-0 top-0 w-full z-50 lg:pl-8 lg:pr-10 md:pl-10 md:pr-10.5'>
             <img src={logo} className='w-33 h-17  block'></img>
-            <div className='  hidden ml-2 w-full justify-center items-center sm:flex sm:gap-10 sm:w-full sm:justify-center '>
+            <div className='hidden ml-2 w-full justify-center items-center sm:flex sm:gap-10 sm:w-full sm:justify-center '>
                 <NavLink className='text-[#6B7391] font-bold text-40' to='/'>Home</NavLink>
                 <NavLink className='text-[#6B7391] font-bold text-40 ' to='/company'>Company</NavLink>
                 <NavLink className='text-[#6B7391] font-bold text-40 ' to='/jobseeker'>Job seeker</NavLink>
@@ -32,7 +33,6 @@ const Navbar = () => {
                     <a href="/jobseeker" className='font-bold text-40 py-2  flex justify-start items-center'>Job Seeker</a>
                 </div>
             )}
-
         </nav>
     )
 }

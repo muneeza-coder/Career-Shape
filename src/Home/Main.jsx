@@ -5,6 +5,8 @@ import Jobseekerhome from './Jobseekerhome'
 import Homeslider from './Homeslider'
 import NumRange from './NumRange'
 import MainPipline from './MainPipline'
+import Lastbox from './Lastbox'
+import Footer from './Footer'
 
 const Main = () => {
 
@@ -16,9 +18,8 @@ const Main = () => {
             <Homeslider />
             <NumRange />
             <MainPipline />
-            <Homeslider />
-            <Homeslider />
-
+            <Lastbox />
+            <Footer />
         </div>
     )
 }

@@ -63,7 +63,7 @@ const Jobseekerhome = () => {
             < div className='flex flex-col lg:mr-10 xl:mr-10 md:mr-5' >
                 <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] text-sm px-2 py-1 rounded-full max-w-32 font-semibold mb-5 flex justify-center '>For Jobseeker</h6>
                 <h1 className="font-extrabold text-5xl  text-[#1B2340] flex flex-wrap sm:max-w-4xl md:max-w-2xl  md:text-6xl">Shape your career around the right role.</h1>
-                <p className='text-[#6B7391] sm:max-w-4xl md:max-w-xl mt-5 flex flex-wrap'>Browse open roles, apply in under a minute and see your match score and skill gaps straight away.</p>
+                <p className='text-[#6B7391] sm:max-w-4xl md:max-w-xl mt-5 flex flex-wrap text-lg'>Browse open roles, apply in under a minute and see your match score and skill gaps straight away.</p>
 
                 {/* <p className='text-[#6B7391] mt-5 sm:text-lg  mr-3 sm:w-full sm:mr-0 w-[38vh] flex flex-wrap'>Browse open roles, apply under a minute and see your match score straight away</p> */}
                 <div className='mt-7 flex gap-2'>

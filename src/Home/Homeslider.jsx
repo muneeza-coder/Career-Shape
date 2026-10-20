@@ -74,7 +74,7 @@ const Homeslider = () => {
                 <div className='min-w-full'><ComanyHome /></div>
                 <div className='min-w-full'><Jobseekerhome /></div>
             </div>
-            <div className='flex justify-center gap-2 mt-4 items-center xl:w-[120vh] 2xl:w-[140vh]  w-full'>
+            <div className='flex justify-center gap-2 mt-4 items-center    w-full'>
                 <button onClick={() => {
                     if (slide === 1) {
                         setslide(0)
