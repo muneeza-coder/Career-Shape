@@ -99,6 +99,7 @@ import Home from './pages/Home.jsx'
 import Company from './pages/Company.jsx'
 import Emplyee from './pages/Emplyee.jsx'
 import Main from './Home/Main.jsx'
+import Signup1 from './Signup/Signup1.jsx'
 const App = () => {
   return (
 
@@ -107,6 +108,7 @@ const App = () => {
       <Main />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/Signup' element={<Signup1 />} />
         <Route path='/company' element={<Company />} />
         <Route path='/jobseeker' element={<Emplyee />} />
 

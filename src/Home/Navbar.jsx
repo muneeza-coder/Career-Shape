@@ -1,10 +1,12 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo1.svg'
 import { X, Menu } from 'lucide-react'
 import { useState } from 'react'
 import Footer from './Footer'
 const Navbar = () => {
+    const navigate=useNavigate()
+
     const [activebtn, setactivebtn] = useState('signup')
     const [menuopen, setmenuopen] = useState(false)
     return (
@@ -23,6 +25,8 @@ const Navbar = () => {
                 }} className={`  rounded-xl font-semibold text-20 px-3 py-1.5 active:scale-95 sm:py-2.5 sm:px-5 sm:text-40 ${activebtn === 'login' ? 'bg-[#3D5AFE] text-[#ffff]' : 'text-[#3D5AFE] bg-[#E8ECFF]'}  active:scale-95`}>Login</button>
                 <button onClick={() => {
                     setactivebtn('signup')
+                    navigate('/Signup')
+
                 }} className={` rounded-xl font-semibold text-20 px-3 py-1.5 active:scale-95 sm:py-2.5 sm:px-5 sm:text-40 ${activebtn === 'signup' ? 'bg-[#3D5AFE] text-[#ffff]' : 'text-[#3D5AFE] bg-[#E8ECFF]'}`}>Signup</button>
                 <button onClick={() => setmenuopen(!menuopen)} className=' sm:hidden flex  justify-center items-center rounded-xl px-3 py-1 active:scale-95 bg-white'>{menuopen ? <X size={16} strokeWidth={1.5} /> : <Menu size={16} strokeWidth={1.5} />}</button>
             </div>
