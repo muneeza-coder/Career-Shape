@@ -105,9 +105,8 @@ const App = () => {
 
     <div
       className='flex flex-col h-full w-full '>
-      <Main />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Main />} />
         <Route path='/Signup' element={<Signup1 />} />
         <Route path='/company' element={<Company />} />
         <Route path='/jobseeker' element={<Emplyee />} />
