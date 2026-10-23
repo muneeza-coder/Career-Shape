@@ -38,7 +38,7 @@ const Pipcard1 = () => {
                     <div className='rounded-xl flex-[1_1_200px] flex flex-col px-2 py-3 bg-[#E4E7F1]/45 gap-3 border-1 border-[#E4E7F1]'>
                         <p className='text-[#6B7391] text-sm font-semibold'>Test</p>
                         <span className=' w-full flex  gap-1 bg-white pl-2 py-2  rounded-xl '><p className=' w-fit h-fit rounded-full flex justify-center text-[#2E2277] bg-[#D0C9F7] p-1.5 text-[10px] font-bold'>AY</p><p className='text-xs text-[#1B2340] font-bold flex justify-center items-center'>Amna</p></span>
-                        <span className=' flex  gap-1 bg-white pl-2 py-2 rounded-xl '><p className='b w-fit h-fit rounded-full flex justify-center text-[#297722] bg-[#CDF7C9] p-1.5 text-[10px] font-bold'>NB</p><p className='text-xs text-[#1B2340] font-bold flex justify-center items-center'>Nabeel</p></span>
+                        <span className=' flex  gap-1 bg-white pl-2 py-2 rounded-xl '><p className=' w-fit h-fit rounded-full flex justify-center text-[#297722] bg-[#CDF7C9] p-1.5 text-[10px] font-bold'>NB</p><p className='text-xs text-[#1B2340] font-bold flex justify-center items-center'>Nabeel</p></span>
                     </div>
                     <div className='rounded-xl flex-[1_1_200px]  flex flex-col px-2 py-3 bg-[#E4E7F1]/45 gap-3 border-1 border-[#E4E7F1]'>
                         <p className='text-[#6B7391] text-sm font-semibold'>Interview</p>
