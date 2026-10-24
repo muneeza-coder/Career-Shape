@@ -4,16 +4,16 @@ const Left = () => {
 
     return (
         <div style={{ background: "linear-gradient(to right ,#4A3AFF,#2B2299)" }}
-            className=' hidden w-1/2  p-12  lg:flex lg:flex-col lg:justify-between '>
-            <div className=' h-18  w-50 items-baseline    '
+            className=' hidden w-1/2  p-12  md:flex md:flex-col md:justify-between  '>
+            <div className=' h-10  w-40 items-baseline    '
             >
                 <img src={logo}
                     className='h-full w-full object-contain '
                 />
             </div>
             <div className="flex flex-col gap-5">
-                <h1 className='text-5xl  text-white font-semibold '>Create your free account</h1>
-                <p className='text-white text-lg font-normal  '>Companies track candidates. Job seeker apply and see their match score.</p>
+                <h1 className='text-3xl  text-white font-bold '>Create your free account</h1>
+                <p className='text-white text-[16px] font-normal  '>Companies track candidates. Job seeker apply and see their match score.</p>
             </div>
 
             <div className='flex  flex-wrap  p-2  bg-[#F5F6FA] rounded-xl'>
