@@ -6,6 +6,7 @@ import Homeslider from './Homeslider'
 import NumRange from './NumRange'
 import MainPipline from './MainPipline'
 import Lastbox from './Lastbox'
+
 import Footer from './Footer'
 
 const Main = () => {
