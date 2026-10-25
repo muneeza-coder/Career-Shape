@@ -21,6 +21,7 @@ const Navbar = () => {
             </div>
             <div className=' flex gap-1 sm:flex sm:gap-3 '>
                 <button onClick={() => {
+                    navigate("/login")
                     setactivebtn('login')
                 }} className={`  rounded-xl font-semibold text-20 px-3 py-1.5 active:scale-95 sm:py-2.5 sm:px-5 sm:text-40 ${activebtn === 'login' ? 'bg-[#3D5AFE] text-[#ffff]' : 'text-[#3D5AFE] bg-[#E8ECFF]'}  active:scale-95`}>Login</button>
                 <button onClick={() => {

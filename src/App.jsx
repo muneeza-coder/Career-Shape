@@ -100,6 +100,7 @@ import Company from './pages/Company.jsx'
 import Emplyee from './pages/Emplyee.jsx'
 import Main from './Home/Main.jsx'
 import Signup1 from './Signup/Signup1.jsx'
+import Login1 from './Login/Login1.jsx'
 const App = () => {
   return (
 
@@ -110,7 +111,7 @@ const App = () => {
         <Route path='/Signup' element={<Signup1 />} />
         <Route path='/company' element={<Company />} />
         <Route path='/jobseeker' element={<Emplyee />} />
-
+ <Route path='/login' element={<Login1 />} />
       </Routes>
     </div>
   )
