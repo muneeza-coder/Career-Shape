@@ -4,7 +4,7 @@ import Card3right from './Card3right'
 
 const ProfileCard3Main = () => {
     return (
-        <div className='flex gap-5'>
+        <div className='flex gap-3'>
             <Card3left />
             <Card3right />
         </div>

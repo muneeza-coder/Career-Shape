@@ -69,7 +69,7 @@ export default function LoginForm() {
                        text-white rounded-xl text-xl  active:scale-95 focus:outline-none
                          cursor-pointer font-semibold transition-transform "
             onClick={() => {
-              navigate('/adminprofile')
+              navigate('/admindashboard')
             }}
           >
             Log in

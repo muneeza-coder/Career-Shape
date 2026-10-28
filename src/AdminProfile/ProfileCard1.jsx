@@ -11,7 +11,7 @@ const ProfileCard1 = () => {
                     <p className='text-[#6B7391] text-[15px]'>Platform Administrator Operations</p>
                     <span className='flex gap-1 mt-2'>
                         <h6 className='rounded px-2 py-1 bg-[#E8ECFF]   text-[#3D5AFE] text-xs'>Administrator</h6>
-                        <h6 className='rounded px-2 py-1 bg-[#81f6d785] text-[#16B890]  text-xs'>Active</h6>
+                        <h6 className='rounded px-2 py-1  bg-[#16B890]/20  text-[#16B890]  text-xs'>Active</h6>
                     </span>
                 </div>
 

@@ -102,6 +102,7 @@ import Main from './Home/Main.jsx'
 import Signup1 from './Signup/Signup1.jsx'
 import Login1 from './Login/Login1.jsx'
 import AdminProfile from './AdminProfile/AdminProfile.jsx'
+import AdminDashboard from './AdminDashboard/AdminDashboard.jsx'
 const App = () => {
   return (
 
@@ -114,6 +115,7 @@ const App = () => {
         <Route path='/jobseeker' element={<Emplyee />} />
         <Route path='/adminprofile' element={<AdminProfile />} />
         <Route path='/login' element={<Login1 />} />
+        <Route path='/admindashboard' element={<AdminDashboard />} />
       </Routes>
     </div>
   )
