@@ -2,7 +2,8 @@ import React from 'react'
 
 const ProfileCard2 = () => {
     return (
-        <div className='grid grid-cols-4 gap-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3'>
+
             <div className='border border-gray-300 p-5 flex flex-col justify-center items-start gap-2 rounded-xl bg-white'>
                 <h3 className='font-bold text-3xl text-[#1B2340]'>128</h3>
                 <p className='text-[#6B7391] text-xs'>Companies verified</p>

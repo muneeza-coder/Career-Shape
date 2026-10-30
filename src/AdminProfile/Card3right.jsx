@@ -2,8 +2,8 @@ import React from 'react'
 
 const Card3right = () => {
     return (
-        <div className='w-1/2 flex flex-col  justify-between' >
-            <div className='px-4 py-6 flex flex-col gap-3  border border-gray-300 rounded-xl bg-white '>
+        <div className='w-full flex flex-col  gap-3 lg:w-1/2 lg:flex-col justify-between' >
+            <div className='px-4 py-6 flex flex-col gap-3  border border-gray-300 rounded-xl bg-white'>
                 <h3 className='text-[#1B2340] text-lg font-bold mb-5'>Account and security</h3>
                 <div className='flex justify-between items-center pb-3 border-b border-gray-300'>
                     <div className='flex flex-col gap-1'>
@@ -26,7 +26,7 @@ const Card3right = () => {
             </div >
             <div className='px-4 py-6 flex flex-col gap-3  border border-gray-300 rounded-xl bg-white '>
                 <h3 className='text-[#1B2340] text-lg font-bold '>Permissions</h3>
-                <div className='flex gap-1'>
+                <div className='flex gap-1 flex-wrap'>
                     <h6 className='rounded px-2 py-1 bg-[#16B890]/20   text-[#16B890] text-xs'>Verify companies</h6>
                     <h6 className='rounded px-2 py-1 bg-[#16B890]/20    text-[#16B890] text-xs'>Moderate job posting</h6>
                     <h6 className='rounded px-2 py-1 bg-[#16B890]/20  text-[#16B890]  text-xs'>View platform analytics</h6>

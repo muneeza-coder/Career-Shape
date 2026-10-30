@@ -47,10 +47,10 @@ import React from 'react'
 
 const Card3left = () => {
     return (
-        <div className='w-1/2 flex flex-col px-4 py-6 gap-8 bg-white rounded-xl border  border-gray-300'>
-            <h3 className='text-[#1B2340] text-lg font-bold'>Personal Information</h3>
-            <div className='flex gap-50'>
-                <div className='flex flex-col gap-12'>
+        <div className='w-full lg:w-1/2 flex flex-col px-4 py-6 gap-8 bg-white rounded-xl border  border-gray-300'>
+            <h3 className='text-[#1B2340] text-lg font-bold '>Personal Information</h3>
+            <div className='flex  justify-between xl:gap-50 xl:justify-start'>
+                <div className='flex flex-col gap-12 '>
                     <div className='flex flex-col gap-3'>
                         <h6 className='text-[#1B2340]  text-sm font-bold'>Full name</h6>
                         <p className='text-[#1B2340] text-sm'>Muneeza Zia</p>
