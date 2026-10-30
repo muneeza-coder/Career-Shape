@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
   const [selected, setSelected] = useState(null)
   const [email, setEmail] = useState('')
-  const [pass, setPass] = useState('')
   const [name, setName] = useState('')
   const [info, setInfo] = useState([])
   const navigate = useNavigate()
@@ -42,6 +41,7 @@ const SignUp = () => {
                    cursor-pointer'
           onClick={() => {
             navigate('/')
+
           }}
 
         >
@@ -141,13 +141,13 @@ const SignUp = () => {
                        text-white rounded-xl text-xl  active:scale-95 focus:outline-none
                          cursor-pointer font-semibold transition-transform '
             onClick={(e) => {
-              if (email.trim() === "" || pass.trim() === "" || name.trim() === "") {
+              if (email.trim() === "" || password.trim() === "" || name.trim() === "") {
                 alert("Please enter your email or password");
               } else {
-
-                setdata(e);
-                console.log(" sign up button clicked")
+                 navigate('/aboutYou')
               }
+
+            
             }
             }
           >Create account</button>

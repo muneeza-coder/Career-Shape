@@ -101,6 +101,8 @@ import Emplyee from './pages/Emplyee.jsx'
 import Main from './Home/Main.jsx'
 import Signup1 from './Signup/Signup1.jsx'
 import Login1 from './Login/Login1.jsx'
+import AboutYou from './jobseeker profile/Aboutyou.jsx'
+import SideBar from './jobseeker profile/Sidebar1.jsx'
 const App = () => {
   return (
 
@@ -112,6 +114,8 @@ const App = () => {
         <Route path='/company' element={<Company />} />
         <Route path='/jobseeker' element={<Emplyee />} />
  <Route path='/login' element={<Login1 />} />
+ <Route path='/aboutYou' element={<AboutYou/>}/>
+ <Route path='/sidebar' element={<SideBar/>}/>
       </Routes>
     </div>
   )
