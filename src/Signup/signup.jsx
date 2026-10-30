@@ -2,23 +2,17 @@ import React, { useState } from 'react'
 
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+
 <FaLongArrowAltLeft />
 
 const SignUp = () => {
   const [selected, setSelected] = useState(null)
   const [email, setEmail] = useState('')
-  const [pass, setPass] = useState('')
   const [name, setName] = useState('')
   const [info, setInfo] = useState([])
   const navigate = useNavigate()
+  
   const setdata = (e) => {
-    // e.preventDefault();
-    // const newinfo=[...info];
-    //  newinfo.push({email,pass});
-    //   setInfo(newinfo)
-
-
-
     console.log(email);
     console.log(pass);
 
@@ -115,7 +109,7 @@ const SignUp = () => {
             <button className='absolute right-3 top-1/2 -translate-y-12 text-[#3D5AFE] font-medium hover:underline focus:outline-none'>Show</button>
           </div> */}
           <div className='w-full gap-3 flex flex-col'>
-            <label className="block text-[#1B2340] text-sm  font-bold">Password</label>
+           <h1 className=' text-[#1B2340] text-sm   font-bold'>Password</h1>
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
@@ -141,13 +135,15 @@ const SignUp = () => {
                        text-white rounded-xl text-xl  active:scale-95 focus:outline-none
                          cursor-pointer font-semibold transition-transform '
             onClick={(e) => {
-              if (email.trim() === "" || pass.trim() === "" || name.trim() === "") {
-                alert("Please enter your email or password");
+              if (email.trim() === "" || password.trim() === "" || name.trim() === "") {
+                alert("Some input feilds are empty. ");
               } else {
 
-                setdata(e);
-                console.log(" sign up button clicked")
+              
+
+                navigate('/Company_Detail')
               }
+             
             }
             }
           >Create account</button>

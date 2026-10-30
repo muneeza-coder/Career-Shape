@@ -31,7 +31,7 @@ const SidebarAdmin = () => {
                             setactive(el.name)
                             settab(el.name)
 
-                        }} className={`text-xs md:text-[15px]  w-full flex flex[1,1,200px] flex-col items-center justify-center md:items-start md:justify-start md:flex-row gap-3 rounded-xl px-4 py-3 font-bold hover:cursor-pointer  ${active === el.name ? "bg-[#E8ECFF]  text-[#3D5AFE]" : "text-[#6B7391]"}`}
+                        }} className={`text-xs md:text-[15px]  w-full flex  flex-col items-center justify-center md:items-start md:justify-start md:flex-row gap-3 rounded-xl px-4 py-3 font-bold hover:cursor-pointer  ${active === el.name ? "bg-[#E8ECFF]  text-[#3D5AFE]" : "text-[#6B7391]"}`}
 
                         >
                             <p>{el.icon}</p>
