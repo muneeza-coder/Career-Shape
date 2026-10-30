@@ -10,7 +10,7 @@ const[logo,setLogo]=useState()
      onfinish({})
     }
   return (
-    <div className='    '>
+    <div className=' w-full   '>
         <div>
            <h1>Add your logo and hiring plans</h1>
            <p>Optional:You can change everything later.</p>
