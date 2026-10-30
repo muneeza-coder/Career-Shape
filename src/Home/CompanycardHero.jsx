@@ -33,8 +33,8 @@ const CompanycardHero = () => {
             <h3 className='text-lg text-[#1B2340] font-bold'>Try the AI match</h3>
             < h4 className=' text-[#6B7391] ' > Job: Frontend Developer Type a candidate's skills</h4>
             < div className='flex gap-2  flex-wrap xl:flex-nowrap sm:flex-wrap' >
-                <h6 className='rounded px-2 py-1  bg-[#81f6d785] text-[#16B890] text-sm'>react</h6>
-                <h6 className='rounded px-2 py-1  bg-[#81f6d785] text-[#16B890] text-sm'>css</h6>
+                <h6 className='rounded px-2 py-1   bg-[#16B890]/20  text-[#16B890] text-sm'>react</h6>
+                <h6 className='rounded px-2 py-1   bg-[#16B890]/20  text-[#16B890] text-sm'>css</h6>
                 <h6 className='rounded px-2 py-1 bg-[#E8ECFF]  text-[#3D5AFE] text-sm'>typescript</h6>
                 <h6 className='rounded px-2 py-1 bg-[#E8ECFF]   text-[#3D5AFE] text-sm'>javascript</h6>
             </div >

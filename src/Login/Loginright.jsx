@@ -68,6 +68,9 @@ export default function LoginForm() {
             className=" w-full p-4 shadow-3xl bg-[#3D5AFE] 
                        text-white rounded-xl text-xl  active:scale-95 focus:outline-none
                          cursor-pointer font-semibold transition-transform "
+            onClick={() => {
+              navigate('/admindashboard')
+            }}
           >
             Log in
           </button>
