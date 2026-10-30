@@ -42,9 +42,9 @@ const JobseekerCardHero = () => {
 
             <h4 className=' text-[#6B7391] sm:w-full  flex '>Your skills vs what the job need</h4>
             <div className='flex gap-2  xl:flex-nowrap flex-wrap sm:flex-wrap'>
-                <h6 className='rounded px-2 py-1  bg-[#81f6d785] text-[#16B890] text-sm'>react</h6>
-                <h6 className='rounded px-2 py-1  bg-[#81f6d785] text-[#16B890] text-sm'>css</h6>
-                <h6 className='rounded px-2 py-1 bg-[#81f6d785] text-[#16B890]  text-sm'>typescript</h6>
+                <h6 className='rounded px-2 py-1   bg-[#16B890]/20  text-[#16B890] text-sm'>react</h6>
+                <h6 className='rounded px-2 py-1   bg-[#16B890]/20  text-[#16B890] text-sm'>css</h6>
+                <h6 className='rounded px-2 py-1  bg-[#16B890]/20  text-[#16B890]  text-sm'>typescript</h6>
                 <h6 className='rounded px-2 py-1 bg-[#E8ECFF]   text-[#3D5AFE] text-sm'>javascript</h6>
             </div>
             <div className='max-w-xl  bg-gray-100  h-[2vh]   rounded-full '>
