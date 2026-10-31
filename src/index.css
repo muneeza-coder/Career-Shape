@@ -118,3 +118,6 @@ button {
 /* .wrapperslider {
   touch-action: none;
 } */
+#scbar::-webkit-scrollbar {
+  display: none;
+}
