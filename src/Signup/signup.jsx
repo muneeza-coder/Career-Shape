@@ -21,6 +21,7 @@ const SignUp = () => {
 
 
   }
+  const [role, setrole] = useState('')
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('');
 
@@ -139,10 +140,16 @@ const SignUp = () => {
               if (email.trim() === "" || password.trim() === "" || name.trim() === "") {
                 alert("Some input feilds are empty. ");
               } else {
+                if(selected==="Hiring"){
+                   navigate('/Company_Detail')
+                }
+                else{
+                  if(selected==="Job seeker"){
+                    navigate('/jobseekerprofile')
+                  }
+                }
+               
 
-              
-
-                navigate('/Company_Detail')
               }
              
             }

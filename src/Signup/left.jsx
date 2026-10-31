@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/Logo.svg'
 const Left = () => {
-
     return (
         <div style={{ background: "linear-gradient(to right ,#4A3AFF,#2B2299)" }}
             className=' hidden w-1/2  p-12  md:flex md:flex-col md:justify-between  '>
