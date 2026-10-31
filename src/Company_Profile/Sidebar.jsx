@@ -3,13 +3,12 @@ import React, { useState } from 'react'
 
 const Sidebar=({active})=>{
 
-     const[company_info,setCompany_info]=useState(null)
-     const[company_logo,setCompany_logo]=useState(null)
+   
 
 
     return(
         
-       <aside className='hidden fixed bg-white w-[230px] sm:flex  sm:flex-col sm:border-r  sm:border-gray-300 sm:gap-3 py-10
+       <aside className='hidden  bg-white w-[230px] sm:flex  sm:flex-col sm:border-r  sm:border-gray-300 sm:gap-3 py-10
          sm:px-2   md:px-3   xl:px-4 '>
 
           <div className='flex flex-row items-center bg-transparent rounded-xl px-3 py-2  gap-2'>

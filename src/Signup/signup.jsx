@@ -21,6 +21,7 @@ const SignUp = () => {
 
 
   }
+  const [role, setrole] = useState('')
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('');
 
@@ -50,7 +51,8 @@ const SignUp = () => {
                               ${selected === "Hiring" ?
                 "text-[#3D5AFE]  border-2  border-[#3D5AFE] bg-[#E8ECFF]" :
                 "text-[#1B2340] bg-[#FFFFFF]  border-2 border-[#d4d5d6]"
-              }   `}
+                }   
+              `}
             onClick={() => setSelected("Hiring")}>
 
             <h1>🏢</h1>
@@ -117,7 +119,7 @@ const SignUp = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="At least 8 characters"
                 required
-                className="w-full px-3 py-3 text-sm border border-gray-200 rounded-xl focus:border-[#3D5AFE]
+                className="w-full px-3 py-3 text-sm border border-[#d4d5d6]rounded-xl focus:border-[#3D5AFE]
                       focus:ring-1 focus:ring-[#3D5AFE] outline-none transition pr-12"
               />
               <button
@@ -138,10 +140,16 @@ const SignUp = () => {
               if (email.trim() === "" || password.trim() === "" || name.trim() === "") {
                 alert("Some input feilds are empty. ");
               } else {
+                if(selected==="Hiring"){
+                   navigate('/Company_Detail')
+                }
+                else{
+                  if(selected==="Job seeker"){
+                    navigate('/jobseekerprofile')
+                  }
+                }
+               
 
-              
-
-                navigate('/Company_Detail')
               }
              
             }

@@ -20,9 +20,7 @@ const Company_Info=({onContinue})=>{
     }
 //  sm:w-r-[59%] md:w-r-[67%]
     return(
-        <div  className='w-1/2
-
-         px-6 py-10 flex flex-col items-center justify-start 
+        <div  className='w-full px-6 py-10 flex flex-col items-center justify-start 
                   gap-4  sm:py-10 sm:px-5  md:px-3 ' >
 
          
