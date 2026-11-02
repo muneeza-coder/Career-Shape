@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import AdminProfile from '../AdminProfile/AdminProfile'
 import { LayoutDashboard, UserRound, Sparkles, BuildingComplex, Star, Bot, ArrowLeft, LogOut } from "lucide-react"
 import AdminOverview from '../Admin Overview/AdminOverview'
+import AdminModerate from '../AdminModerate/AdminModerate'
 const SidebarAdmin = () => {
     const navigate = useNavigate()
-    const [active, setactive] = useState("")
-    const [tab, settab] = useState("")
+    const [active, setactive] = useState("Overview")
+    const [tab, settab] = useState("Overview")
     const menu =
         // ['◧     Overview', "✦   Moderate", "☺   Company", "★   Jobseeker", "✦   AI Agent", "☻   Profile", "←   Website", "⇥   Logout"]
         [
@@ -53,7 +54,7 @@ const SidebarAdmin = () => {
                             setactive(el.name)
                             settab(el.name)
 
-                        }} className={`text-xs md:text-[15px] flex-1 min-w-max md:w-full flex flex-nowrap flex-col items-center justify-center md:items-start md:justify-start md:flex-row gap-3 rounded-xl px-4 py-3 font-bold hover:cursor-pointer  ${active === el.name ? "bg-[#E8ECFF]  text-[#3D5AFE]" : "text-[#6B7391]"}`}
+                        }} className={`text-xs md:text-[15px] flex-1 min-w-max md:w-full flex flex-nowrap flex-col items-center justify-center md:items-start md:justify-start md:flex-row gap-3 rounded-xl px-4 py-3 font-bold hover:cursor-pointer  ${active === el.name ? "bg-[#E8ECFF]  text-[#3D5AFE]" : "text-[#6B7391]"}  `}
 
                         >
                             <p>{el.icon}</p>
@@ -71,7 +72,9 @@ const SidebarAdmin = () => {
                 <AdminOverview />
             </div>
 
-
+            <div className={`${tab === "Moderate" ? "flex flex-col ml-60 w-full" : "hidden"}`}>
+                <AdminModerate />
+            </div>
         </div>
     )
 }

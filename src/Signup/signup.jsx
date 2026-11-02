@@ -11,7 +11,7 @@ const SignUp = () => {
   const [name, setName] = useState('')
   const [info, setInfo] = useState([])
   const navigate = useNavigate()
-  
+
   const setdata = (e) => {
     console.log(email);
     console.log(pass);
@@ -51,7 +51,7 @@ const SignUp = () => {
                               ${selected === "Hiring" ?
                 "text-[#3D5AFE]  border-2  border-[#3D5AFE] bg-[#E8ECFF]" :
                 "text-[#1B2340] bg-[#FFFFFF]  border-2 border-[#d4d5d6]"
-                }   
+              }   
               `}
             onClick={() => setSelected("Hiring")}>
 
@@ -111,7 +111,7 @@ const SignUp = () => {
             <button className='absolute right-3 top-1/2 -translate-y-12 text-[#3D5AFE] font-medium hover:underline focus:outline-none'>Show</button>
           </div> */}
           <div className='w-full gap-3 flex flex-col'>
-           <h1 className=' text-[#1B2340] text-sm   font-bold'>Password</h1>
+            <h1 className=' text-[#1B2340] text-sm   font-bold'>Password</h1>
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
@@ -119,7 +119,7 @@ const SignUp = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="At least 8 characters"
                 required
-                className="w-full px-3 py-3 text-sm border border-[#d4d5d6]rounded-xl focus:border-[#3D5AFE]
+                className="w-full px-3 py-3 text-sm border border-[#d4d5d6] rounded-xl focus:border-[#3D5AFE]
                       focus:ring-1 focus:ring-[#3D5AFE] outline-none transition pr-12"
               />
               <button
@@ -140,18 +140,18 @@ const SignUp = () => {
               if (email.trim() === "" || password.trim() === "" || name.trim() === "") {
                 alert("Some input feilds are empty. ");
               } else {
-                if(selected==="Hiring"){
-                   navigate('/Company_Detail')
+                if (selected === "Hiring") {
+                  navigate('/Company_Detail')
                 }
-                else{
-                  if(selected==="Job seeker"){
+                else {
+                  if (selected === "Job seeker") {
                     navigate('/jobseekerprofile')
                   }
                 }
-               
+
 
               }
-             
+
             }
             }
           >Create account</button>

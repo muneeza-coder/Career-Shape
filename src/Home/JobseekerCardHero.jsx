@@ -30,9 +30,11 @@
 // export default JobseekerCardHero
 
 
-import React from 'react'
+import React, { useContext } from 'react'
+import { HomeContextSection } from './HomeContext/HomeContext'
 
 const JobseekerCardHero = () => {
+    const { sectionScroll } = useContext(HomeContextSection)
     return (
 
         // <div className='bg-[#ffffff] lg:h-[25vh] min-[375px]:w-[46vh] min-[412px]:w-[36vh] h-full px-5 py-4 w-[46vh] min-[393px]:w-[38vh] md:w-[53vh] min-[360px]:w-[37vh] rounded-xl  border-2 border-gray-200 mt-6 lg:py-6'>
@@ -54,7 +56,9 @@ const JobseekerCardHero = () => {
                 <h4 className='text-[#1B2340] font-bold  text-lg'>75% match </h4>
                 <h4 className='text-sm text-[#6B7391] ml-2'>Skill to build:javascript</h4>
             </div>
-            <button className=' text-[#fff] w-fit px-6 py-3 rounded-xl text-40 font-semibold bg-[#3D5AFE] active:scale-95 mt-3'>Apply Now</button>
+            <button onClick={() => {
+                sectionScroll('browsejobs')
+            }} className=' text-[#fff] w-fit px-6 py-3 rounded-xl text-40 font-semibold bg-[#3D5AFE] active:scale-95 mt-3'>Apply Now</button>
 
         </div>
     )

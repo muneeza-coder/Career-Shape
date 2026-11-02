@@ -1,4 +1,4 @@
-/* button {
+/* /* button {
   padding: 1em 2em;
   background-color: black;
   color: white;
@@ -104,7 +104,8 @@ button:hover {
   width: 100%;
   background-size: cover;
   background-position: center;
-} */
+} 
+
 @import "tailwindcss";
 
 @theme {
@@ -117,7 +118,67 @@ button {
 
 /* .wrapperslider {
   touch-action: none;
+} 
+#scbar::-webkit-scrollbar {
+  display: none;
 } */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+
+  /* optional: lets you use bg-page, bg-surface, text-ink in Tailwind classes */
+  --color-page: var(--bg);
+  --color-surface: var(--card);
+  --color-ink: var(--ink);
+}
+
+/* ---------- site colours (light and dark) ---------- */
+:root {
+  --bg: #F5F6FA;
+  --ink: #1B2340;
+  --card: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F1426;
+    --ink: #EEF0FA;
+    --card: #181F38;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  /* Manrope from your @theme */
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 760px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+}
+
+
+button {
+  cursor: pointer;
+}
+
+/* .wrapperslider {
+  touch-action: none;
+} */
+
 #scbar::-webkit-scrollbar {
   display: none;
 }

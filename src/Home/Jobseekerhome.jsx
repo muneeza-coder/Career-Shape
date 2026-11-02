@@ -52,11 +52,13 @@
 // //at a time aik button blue raha ga signup or login ma
 
 // export default Jobseekerhome
-import React from 'react'
+import React, { useContext } from 'react'
 import CompanycardHero from './CompanycardHero'
 import JobseekerCardHero from './JobseekerCardHero'
+import { HomeContextSection } from './HomeContext/HomeContext'
 
 const Jobseekerhome = () => {
+    const { sectionScroll } = useContext(HomeContextSection)
     return (
 
         <div className='w-[full]  flex flex-col justify-center md:flex-row md:justify-between ' >
@@ -67,7 +69,9 @@ const Jobseekerhome = () => {
 
                 {/* <p className='text-[#6B7391] mt-5 sm:text-lg  mr-3 sm:w-full sm:mr-0 w-[38vh] flex flex-wrap'>Browse open roles, apply under a minute and see your match score straight away</p> */}
                 <div className='mt-7 flex gap-2'>
-                    <button className='bg-[#E8ECFF]  text-[#3D5AFE] px-5 py-3   rounded-xl font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95'>Browse jobs</button>
+                    <button className='bg-[#E8ECFF]  text-[#3D5AFE] px-5 py-3   rounded-xl font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95' onClick={() => {
+                        sectionScroll('browsejobs')
+                    }}>Browse jobs</button>
                     <button className=' bg-[#E8ECFF]  text-[#3D5AFE] px-5 py-3   rounded-xl   font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95'>See how it works</button>
                 </div>
             </div >

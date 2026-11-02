@@ -8,20 +8,23 @@ import MainPipline from './MainPipline'
 import Lastbox from './Lastbox'
 
 import Footer from './Footer'
+import HomeContext from './HomeContext/HomeContext'
 
 const Main = () => {
 
     return (
 
-        <div
-            className='w-full flex flex-col mx-auto gap-20'>
-            <Navbar />
-            <Homeslider />
-            <NumRange />
-            <MainPipline />
-            <Lastbox />
-            <Footer />
-        </div>
+        <HomeContext>
+            <div
+                className='w-full flex flex-col mx-auto gap-20'>
+                <Navbar />
+                <Homeslider />
+                <NumRange />
+                <MainPipline />
+                <Lastbox />
+                <Footer />
+            </div>
+        </HomeContext>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom'
+import AdminOverview from '../Admin Overview/AdminOverview';
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
@@ -70,6 +71,7 @@ export default function LoginForm() {
                          cursor-pointer font-semibold transition-transform "
             onClick={() => {
               navigate('/admindashboard')
+
             }}
           >
             Log in
@@ -89,6 +91,6 @@ export default function LoginForm() {
       {/* <div className="text-center text-[15px] text-gray-400">
         Demo only: accounts are saved in this browser, not on a server.
       </div> */}
-    </div>
+    </div >
   );
 }
