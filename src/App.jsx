@@ -143,7 +143,8 @@ import Login1 from './Login/Login1.jsx'
 import AboutYou from './jobseeker profile/Aboutyou.jsx'
 import SideBar from './jobseeker profile/Sidebar1.jsx'
 import Company_detail from './Company_Profile/Company_details.jsx'
-import Company_DB from './Company_DB/Sidebar.jsx'
+import Company_DB from './Company_DB/MainDB.jsx'
+
 import TellAbout from './jobseeker profile/Tellabout.jsx'
 
 import AdminProfile from './AdminProfile/AdminProfile.jsx'
@@ -160,13 +161,13 @@ const App = () => {
         <Route path='/Signup' element={<Signup1 />} />
         <Route path='/company' element={<Company />} />
         <Route path='/jobseeker' element={<Emplyee />} />
-        <Route path='/login' element={<Login1 />} />
+               <Route path='/login' element={<Login1 />} />
+               <Route path='/aboutYou' element={<AboutYou/>}/>
+        <Route path='/sidebar' element={<SideBar/>}/>
         <Route path='/jobseekerprofile' element={<AboutYou />} />
-        <Route path='/login' element={<Login1 />} />
-        <Route path='/Company_Detail' element={< Company_detail />} />
+=        <Route path='/Company_Detail' element={< Company_detail />} />
         <Route path='/Company_Dashboard' element={<Company_DB />} />
         <Route path='/adminprofile' element={<AdminProfile />} />
-        <Route path='/login' element={<Login1 />} />
         <Route path='/admindashboard' element={<AdminDashboard />} />
       </Routes>
     </div>

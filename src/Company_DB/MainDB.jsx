@@ -4,7 +4,8 @@ import logo from '../assets/logo1.svg'
 const Sidebar=()=>{
     return(
         <div className='h-full flex flex-col'>
-           <Sidebar className='h-full w-50 flex flex-col border-2 border-gray-500'>
+            <h1>Company Dashboard</h1>
+           {/* <Sidebar className='h-full w-50 flex flex-col border-2 border-gray-500'>
                <ul>
                 <li>
                     <div className='flex flex-wrap'>
@@ -17,7 +18,7 @@ const Sidebar=()=>{
                 </li>
             </ul>
             
-          </Sidebar>     
+          </Sidebar>      */}
             
             
             
