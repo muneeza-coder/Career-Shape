@@ -134,22 +134,16 @@
 
 // export default App
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home.jsx'
-import Company from './pages/Company.jsx'
-import Emplyee from './pages/Emplyee.jsx'
 import Main from './Home/Main.jsx'
-import Signup1 from './Signup/Signup1.jsx'
-import Login1 from './Login/Login1.jsx'
-import AboutYou from './jobseeker profile/Aboutyou.jsx'
-import SideBar from './jobseeker profile/Sidebar1.jsx'
-import Company_detail from './Company_Profile/Company_details.jsx'
-import Company_DB from './Company_DB/MainDB.jsx'
+import Signup1 from './Authentication/src/Signup/Signup1.jsx'
+import Login1 from './Authentication/src/Login/Login1.jsx'
+import AboutYou from './Jobseeker/src/jobseeker profile/Aboutyou.jsx'
+import SideBar from './Jobseeker/src/jobseeker profile/Sidebar1.jsx'
+import Company_detail from './Company/src/Company_Profile/Company_details.jsx'
+import Company_DB from './Company/src/Company_DB/MainDB.jsx'
+import AdminProfile from "./Admin/src/AdminDashboard/AdminProfile/AdminProfile.jsx"
+import AdminDashboard from './Admin/src/AdminDashboard/AdminDashboard.jsx'
 
-import TellAbout from './jobseeker profile/Tellabout.jsx'
-
-import AdminProfile from './AdminProfile/AdminProfile.jsx'
-import AdminDashboard from './AdminDashboard/AdminDashboard.jsx'
-import NetBackground from './NetBackground.jsx'
 const App = () => {
   return (
 
@@ -159,13 +153,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/Signup' element={<Signup1 />} />
-        <Route path='/company' element={<Company />} />
-        <Route path='/jobseeker' element={<Emplyee />} />
-               <Route path='/login' element={<Login1 />} />
-               <Route path='/aboutYou' element={<AboutYou/>}/>
-        <Route path='/sidebar' element={<SideBar/>}/>
+        <Route path='/login' element={<Login1 />} />
+        <Route path='/aboutYou' element={<AboutYou />} />
+        <Route path='/sidebar' element={<SideBar />} />
         <Route path='/jobseekerprofile' element={<AboutYou />} />
-=        <Route path='/Company_Detail' element={< Company_detail />} />
+        =        <Route path='/Company_Detail' element={< Company_detail />} />
         <Route path='/Company_Dashboard' element={<Company_DB />} />
         <Route path='/adminprofile' element={<AdminProfile />} />
         <Route path='/admindashboard' element={<AdminDashboard />} />

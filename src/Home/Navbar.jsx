@@ -1,11 +1,10 @@
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import logo from '../assets/logo1.svg'
+import logo from "../assets/logo1.svg"
 import { X, Menu } from 'lucide-react'
 import { useState } from 'react'
-import Footer from './Footer'
 const Navbar = () => {
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
     const [activebtn, setactivebtn] = useState('signup')
     const [menuopen, setmenuopen] = useState(false)
