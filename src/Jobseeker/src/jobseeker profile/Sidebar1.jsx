@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { JobseekerProfileContext } from './JobseekerContext/JobseekerContext'
 
 const Sidebar1 = () => {
+    const{choice,setchoice}=useContext(JobseekerProfileContext)
   return (
-    <div className="w-[300px] h-full  bg-[#FFFFFF] border-slate-200 px-4 py-8  border-r flex flex-col ml-30 mt-10">
+    <div className="w-[300px] h-full  bg-[#FFFFFF] border-slate-200 px-4 pt-8 pb-15 border-r flex flex-col ml-30 mt-10">
         <div className=" flex flex-col font-bold gap-4">
             <div className='flex gap-4'>
                 <h3 className="w-6 h-6  bg-[#3D5AFE]  text-white text-[11px] font-bold rounded-full flex items-center justify-center ml-3">✓
@@ -10,29 +12,86 @@ const Sidebar1 = () => {
             <h3 className="text-sm text-[#1B2340]">Create Account</h3>
         </div>
 
-        <div className='flex gap-2 bg-[#3D5AFE] text-white py-2.5 px-3 rounded-xl '>
-            <h3 className="w-6 h-6  bg-white  text-[#3D5AFE] text-[11px] font-bold rounded-full flex items-center justify-center">2
+        {/* <div className='flex gap-2 bg-[#3D5AFE] text-white   py-2.5 px-3 rounded-xl '> */}
+<div className={`${choice==="About"?"flex":"hidden"} gap-4  text-[#6B7391] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6   bg-[#E8ECFF] text-[11px] font-bold rounded-full flex items-center justify-center ${choice==="About"?"flex":"hidden"}`}>2
+                          
             </h3>
             <h3 className="text-sm ">About you</h3>
-        </div>
+        </div>     
+        <div className={`${choice==="About"?"hidden":"flex"} gap-4  text-[#1B2340] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6  text-white  bg-[#3D5AFE] text-[11px] font-bold rounded-full flex items-center justify-center `}>✓
+                
+            </h3>
+            <h3 className="text-sm ">About you</h3>
+        </div>                    
+<div className={`${choice==="About"?"flex":"hidden"} gap-4  text-[#6B7391] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6   bg-[#E8ECFF] text-[11px] font-bold rounded-full flex items-center justify-center ${choice==="About"?"flex":"hidden"}`}>2
+                          
+            </h3>
+            <h3 className="text-sm ">Education</h3>
+        </div>     
+        <div className={`${choice==="Education"?"flex":"hidden"} gap-4  text-[#1B2340] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6  text-white  bg-[#3D5AFE] text-[11px] font-bold rounded-full flex items-center justify-center `}>✓
+                
+            </h3>
+            <h3 className="text-sm ">Education</h3>
+        </div>      
+        <div className={`${choice==="Experience"?"flex":"hidden"} gap-4  text-[#6B7391] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6   bg-[#E8ECFF] text-[11px] font-bold rounded-full flex items-center justify-center ${choice==="Experience"?"flex":"hidden"}`}>2
+                          
+            </h3>
+            <h3 className="text-sm ">Experience</h3>
+        </div>     
+        <div className={`${choice==="Experience"?"hidden":"flex"} gap-4  text-[#1B2340] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6  text-white  bg-[#3D5AFE] text-[11px] font-bold rounded-full flex items-center justify-center `}>✓
+                
+            </h3>
+            <h3 className="text-sm ">Experience</h3>
+        </div>                    
 
-        <div className='flex gap-4 py-2.5 px-3'>
+        {/* <div className='flex gap-4 py-2.5 px-3'>
             <h3 className="w-6 h-6 bg-[#E8ECFF]  text-[#6B7391] text-[11px] font-bold rounded-full flex items-center justify-center">3
             </h3>
             <h3 className="text-sm text-[#6B7391]">Education</h3>
-        </div>
+        </div> */}
 
-        <div className='flex gap-4 py-2.5 px-3'>
+        {/* <div className='flex gap-4 py-2.5 px-3'>
             <h3 className="w-6 h-6   bg-[#E8ECFF]  text-[#6B7391] text-[11px] font-bold rounded-full flex items-center justify-center">4
             </h3>
             <h3 className="text-sm text-[#6B7391]">Experience</h3>
-        </div>
+        </div> */}
+         {/* <div className={`${choice==="Education"?"flex":"hidden"} gap-4  text-[#6B7391] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6   bg-[#E8ECFF] text-[11px] font-bold rounded-full flex items-center justify-center `}>3
+                          
+            </h3>
+            <h3 className="text-sm ">Education</h3>
+        </div>     
+        <div className={`${choice==="Education"?"hidden":"flex"} gap-4  text-[#1B2340] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6  text-white  bg-[#3D5AFE] text-[11px] font-bold rounded-full flex items-center justify-center `}>✓
+                
+            </h3>
+            <h3 className="text-sm ">Education</h3>
+        </div>   
+        <div className={`${choice==="Experience"?"flex":"hidden"} gap-4  text-[#6B7391] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6   bg-[#E8ECFF] text-[11px] font-bold rounded-full flex items-center justify-center `}>4
+                          
+            </h3>
+            <h3 className="text-sm ">Experience</h3>
+        </div>     
+        <div className={`${choice==="Experience"?"hidden":"flex"} gap-4  text-[#1B2340] bg-transparent py-2.5 px-3 rounded-xl `}>
+            <h3 className={`w-6 h-6  text-white  bg-[#3D5AFE] text-[11px] font-bold rounded-full flex items-center justify-center `}>✓
+                
+            </h3>
+            <h3 className="text-sm ">Experience</h3>
+        </div>                    
+
         
         <div className='flex gap-4 py-2.5 px-3'>
             <h3 className="w-6 h-6 bg-[#E8ECFF]  text-[#6B7391] text-[11px] font-bold rounded-full flex items-center justify-center">5
             </h3>
             <h3 className="text-sm text-[#6B7391]">Skills</h3>
-        </div>
+        </div> */}
 
         <div className='flex gap-4 py-2.5 px-3'>
             <h3 className="w-6 h-6  bg-[#E8ECFF]  text-[#6B7391] text-[11px] font-bold rounded-full flex items-center justify-center">6

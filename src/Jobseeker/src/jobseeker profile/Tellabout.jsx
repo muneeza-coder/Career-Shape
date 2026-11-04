@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {JobseekerProfileContext} from './JobseekerContext/JobseekerContext'
 
 const Tellabout = () => { 
+  const {choice,setchoice}=useContext(JobseekerProfileContext)
   return (
-    <div className='w-full pl-22 pr-44'>
-    <div className="w-full  mt-21">
+    // <div className='w-full pl-22 pr-44 py-10       '>
+        <div className={`w-full pl-22 pr-44 py-10   ${choice==="About"?"flex flex-col":"hidden"}`}>
+
+    <div className="w-full  ">
         <h3 className="text-[#1B2340] font-extrabold text-xl"> Tell us about yourself</h3>
         <p className="text-[#6B7391] text-sm mt-3">Your headline is the first thing employers see.</p>
     </div>
@@ -27,7 +31,9 @@ const Tellabout = () => {
 <button type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
             Back
           </button>
-          <button type="submit"
+          <button onClick={()=>{
+            setchoice("Education")
+          }} type="submit"
             className="px-6 py-2.5 bg-[#3D5AFE] text-white  rounded-xl hover:bg-blue-700 font-bold">
             Save and continue
             </button>
