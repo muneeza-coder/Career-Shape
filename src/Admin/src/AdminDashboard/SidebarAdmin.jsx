@@ -57,7 +57,7 @@ const SidebarAdmin = () => {
                         }} className={`text-xs md:text-[15px] flex-1 min-w-max md:w-full flex flex-nowrap flex-col items-center justify-center md:items-start md:justify-start md:flex-row gap-3 rounded-xl px-4 py-3 font-bold hover:cursor-pointer  ${active === el.name ? "bg-[#E8ECFF]  text-[#3D5AFE]" : "text-[#6B7391]"}  `}
 
                         >
-                            <p>{el.icon}</p>
+                            <p className='flex items-center justify-center'>{el.icon}</p>
                             <p>{el.name}</p>
                         </div>
 
