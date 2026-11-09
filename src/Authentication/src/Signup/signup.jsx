@@ -41,7 +41,7 @@ const SignUp = () => {
 
         >
           <FaLongArrowAltLeft className=' mt-1' />Back to website </button>
-        <h1 className=' text-2xl font-extrabold mt-3'>Sign up</h1>
+        <h1 className=' text-2xl text-[#1B2340] font-extrabold mt-3'>Sign up</h1>
         <p className='text-[#6B7391]  '>Please enter your details to create your account</p>
         <h1 className='text-[#1B2340] text-sm  font-bold '>I am</h1>
         <div className=' flex flex-row gap-2 w-full  '>

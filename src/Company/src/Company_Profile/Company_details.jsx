@@ -20,6 +20,7 @@ const Company_detail = () => {
                  lg:px-18 xl:px-38 lg:gap-8 
                 
                 '>
+                  
            <Sidebar />
            <Company_Info/>
            <Logo/> 
