@@ -143,6 +143,7 @@ import Company_detail from './Company/src/Company_Profile/Company_details.jsx'
 import Company_DB from './Company/src/Company_DB/MainDB.jsx'
 import AdminProfile from "./Admin/src/AdminDashboard/AdminProfile/AdminProfile.jsx"
 import AdminDashboard from './Admin/src/AdminDashboard/AdminDashboard.jsx'
+import MainPart from './Splash Screen/MainPart.jsx'
 
 const App = () => {
   return (
@@ -161,6 +162,7 @@ const App = () => {
         <Route path='/Company_Dashboard' element={<Company_DB />} />
         <Route path='/adminprofile' element={<AdminProfile />} />
         <Route path='/admindashboard' element={<AdminDashboard />} />
+        <Route path="/splashscreen" element={<MainPart />} />
       </Routes>
     </div>
   )
