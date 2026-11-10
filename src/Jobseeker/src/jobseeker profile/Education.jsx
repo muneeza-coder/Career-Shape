@@ -10,22 +10,24 @@ const Education = () => {
         <h3 className="text-[#1B2340] font-extrabold text-xl"> Your education</h3>
         <p className="text-[#6B7391] text-sm mt-3">Add your degrees.You can add more later.</p>
     </div>
-    <div className="w-full px-5  rounded-xl bg-white flex flex-col  mt-3 py-8">
+    <div className="w-full px-5  rounded-xl bg-white flex flex-col  mt-3 py-8 text-sm text-[#6B7391] gap-3">
       <div>No education added yet.</div>
-    <form className='flex flex-col gap-5' >
-      <div className="flex flex-col gap-2">
+    <form className='flex flex-col gap-8' >
+      <div className="flex justify-between w-full gap-2">
+      <div className="flex flex-col gap-2 w-1/2">
       <label className="text-sm font-bold text-[#1B2340]">Degree</label>
-      <input type="text"  className="w-250 px-4 py-3 bg-[#F5F6FA] rounded-xl text-gray-800"></input>
+      <input type="text"  className=" px-4 py-3 bg-[#F5F6FA] rounded-xl text-gray-800 "></input>
     </div>
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 w-1/2 ">
       <label className="text-sm font-bold text-[#1B2340]">School / university</label>
-      <input type="text"  className=" px-4 py-3 bg-[#F5F6FA] rounded-xl text-gray-800 w-full"></input>
+      <input type="text"  className=" px-4 py-3 bg-[#F5F6FA] rounded-xl text-gray-800 "></input>
     </div>
-    <div className="flex flex-col gap-2">
+    </div>
+    <div className="flex flex-col gap-2 w-1/2">
       <label className="text-sm font-bold  text-[#1B2340]">Year</label>
       <input type="number" className=" px-4 py-3 bg-[#F5F6FA] rounded-xl text-gray-800 w-full"></input>
       <div>
-      <button type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
+      <button type="button" className="px-4 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
             +Add
           </button>
           </div>
@@ -38,16 +40,18 @@ const Education = () => {
 }} type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
             Back
           </button>
-          <button type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
+          <div className='flex gap-2'>
+          <button type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold ">
             Skip for now
           </button>
           <button onClick={()=>{
             setchoice('Experience')
 
           }} type="submit"
-            className="px-6 py-2.5 bg-[#3D5AFE] text-white  rounded-xl hover:bg-blue-700 font-bold">
+            className="px-6 py-2.5 bg-[#3D5AFE] text-white  rounded-xl hover:bg-blue-700 font-bold ">
             Save and continue
             </button>
+            </div>
     {/* </div>
     </form> */}
     </div>

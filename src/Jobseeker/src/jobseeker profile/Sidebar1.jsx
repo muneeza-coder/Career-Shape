@@ -130,37 +130,37 @@ import { JobseekerProfileContext } from './JobseekerContext/JobseekerContext'
 
 const Sidebar1 = () => {
 
-    const actions = ["About", "Education", "Experience", "Skills", "CV & preferences"]
+    const actions = ["About", "Education", "Experience", "Skills", "CV & Preferences"]
     const { choice, setchoice } = useContext(JobseekerProfileContext)
     const currentIndx = actions.indexOf(choice)
     console.log("choice", currentIndx)
     return (
-        <div className='w-[300px] h-full bg-[#FFFFFF] border-slate-200 px-4 pt-8 pb-15 border-r flex flex-col gap-3 ml-30 mt-10 shrink-0'>
+        <div className='w-[230px] h-full bg-[#FFFFFF] border-slate-200 px-4 pt-8 pb-15 border-r flex flex-col gap-3 ml-30 mt-10 shrink-0'>
             <div className='flex gap-4 py-2.5 px-3'>
                 <h3 className="w-6 h-6  bg-[#3D5AFE]  text-white text-[11px] font-bold rounded-full flex items-center justify-center ml-3">✓
                 </h3>
-                <h3 className="text-sm text-[#1B2340]">Create Account</h3>
+                <h3 className="text-sm font-bold text-[#1B2340]">Create Account</h3>
             </div>
             {actions.map((el, indx) => {
                 console.log("Index:", indx)
                 return <div key={indx} className='flex flex-col'>
 
                     <div className={`flex gap-4 py-2.5 px-3 ${choice == el ? "hidden" : "flex"}`} >
-                        <h3 className={`w-6 h-6  text-[#6B7391] bg-gray-200 text-[11px] font-bold rounded-full flex items-center justify-center ml-3 ${currentIndx > indx ? "hidden" : "flex"}`}>{indx + 1}
+                        <h3 className={`w-6 h-6  text-[#6B7391] bg-gray-200 text-[11px] font-bold rounded-full flex items-center justify-center ml-3 ${currentIndx > indx ? "hidden" : "flex"}`}>{indx + 2}
                         </h3>
 
                         <h3 className={`w-6 h-6  bg-[#3D5AFE]  text-white text-[11px] font-bold rounded-full flex items-center justify-center ml-3 ${currentIndx > indx ? "flex" : "hidden"}`}>✓</h3>
 
-                        <h3 className={`text-sm  text-[#1B2340] ${currentIndx > indx ? "flex " : "hidden"}`}>{el}</h3>
-                        <h3 className={`text-sm text-[#6B7391] ${currentIndx > indx ? "hidden" : "flex"}`}>{el}</h3>
+                        <h3 className={`text-sm font-bold text-[#1B2340] ${currentIndx > indx ? "flex " : "hidden"}`}>{el}</h3>
+                        <h3 className={`text-sm font-bold text-[#6B7391] ${currentIndx > indx ? "hidden" : "flex"}`}>{el}</h3>
 
 
                     </div>
 
-                    <div className={` gap-4 py-2.5 px-3 bg-[#3D5AFE] ${choice === el ? "flex" : "hidden"}`}>
-                        <h3 className="w-6 h-6  text-[#3D5AFE] bg-white text-[11px] font-bold rounded-full flex items-center justify-center ml-3">{indx + 1}
+                    <div className={` gap-4 py-2.5 px-3 bg-[#3D5AFE] rounded-xl ${choice === el ? "flex" : "hidden"}`}>
+                        <h3 className="w-6 h-6  text-[#3D5AFE] bg-white text-[11px] font-bold rounded-full flex items-center justify-center ml-3">{indx + 2}
                         </h3>
-                        <h3 className="text-sm text-white">{el}</h3>
+                        <h3 className="text-sm font-bold text-white">{el}</h3>
                     </div>
                     {/* <div className={` gap-4 py-2.5 px-3 bg-red-800 ${choice !== el && choice === actions[indx + 1] ? "hidden" : "flex"}`}>
                         <h3 className="w-6 h-6  text-[#3D5AFE] bg-white text-[11px] font-bold rounded-full flex items-center justify-center ml-3">{indx + 1}

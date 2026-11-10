@@ -5,6 +5,8 @@ import CompanyProfile  from '../../../Company/src/Company_Profile/Nav.jsx'
 import Edu from './Education.jsx'
 import JobseekerContext,{JobseekerProfileContext} from './JobseekerContext/JobseekerContext.jsx'
 import Experience from './Experience.jsx'
+import Skill from './Skill.jsx'
+import Cv from './CV.jsx'
 const Aboutyou = () => {
   return (
    <JobseekerContext>
@@ -15,6 +17,8 @@ const Aboutyou = () => {
       <TellAbout/>
 <Edu/>
 <Experience/>
+<Skill/>
+<Cv/>
       </div>
     </div>
       
