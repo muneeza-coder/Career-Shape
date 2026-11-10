@@ -28,7 +28,7 @@ const DownHeadings = () => {
             </div>
             <div className={` ${steps === "Skill Gap" ? "flex flex-col  gap-3" : "hidden"}`}>
                 <p className='text-center font-bold text-lg text-[#1B2340]'>Skill gap analysis</p>
-                <p className='text-center text-sm text-[#6B7391]'>Weak skills are highlighted with advice, so jobseekers what to learn</p>
+                <p className='text-center text-sm text-[#6B7391]'>Weak skills are highlighted with advice, so jobseekers what to learnc</p>
             </div>
         </div>
     )
