@@ -35,14 +35,14 @@ const Company_Info=()=>{
                       onChange={(e)=>
                              setC_name( e.target.value)
                       }
-                        className='border border-[#d4d5d6] py-3 px-2 bg-[#F5F6FA] rounded-xl  focus:border-[#3D5AFE]
+                        className='text-sm border border-[#d4d5d6] py-3 px-2 bg-[#F5F6FA] rounded-xl  focus:border-[#3D5AFE]
                       focus:ring-1 focus:ring-[#3D5AFE] outline-none'
                        
                      />
                     </div>
                     <div className=' flex flex-col w-full md:w-1/2 gap-2'>    
                       <label  htmlFor="Industry" className='text-[#1B2340] font-bold text-sm' >Industry</label>
-                      <select id="Industry" name="Industry" className='py-3 px-2  bg-[#F5F6FA] border border-[#d4d5d6] rounded-xl
+                      <select id="Industry" name="Industry" className='py-3 px-2 text-sm bg-[#F5F6FA] border border-[#d4d5d6] rounded-xl
                            focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
                            value={industry}
                       onChange={(e)=>
@@ -62,7 +62,7 @@ const Company_Info=()=>{
                     <div className=' flex flex-col w-full md:w-1/2 gap-2'>
                       <h1 className='text-[#1B2340] font-bold text-sm'>Company size(employees)</h1>
                       <input type='number' id="comp_size" name='comp_size'
-                        className='border border-[#d4d5d6] py-3 px-2  bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
+                        className='text-sm border border-[#d4d5d6] py-3 px-2  bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
                          value={comp_size}
                          onChange={(e)=>
                              setComp_size( e.target.value)
@@ -73,7 +73,7 @@ const Company_Info=()=>{
                     <div className='flex flex-col w-full md:w-1/2 gap-2'>    
                       <h1 className='text-[#1B2340] font-bold text-sm'>City/address</h1>
                       <input type='text' id="address" name='address'
-                        className='border border-[#d4d5d6] py-3 px-2   bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
+                        className=' text-sm border border-[#d4d5d6] py-3 px-2   bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
                         value={address}
                          onChange={(e)=>
                              setAddress( e.target.value)
@@ -85,7 +85,7 @@ const Company_Info=()=>{
                    
                       <h1 className=' mt-2text-[#1B2340] font-bold text-sm'>Linkedin/Facebook/Website</h1>
                       <input type='text' placeholder='https://' id="link" name='link'
-                        className='border border-[#d4d5d6] p-3 bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
+                        className=' text-sm border border-[#d4d5d6] p-3 bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
 
                         value={link}
                       onChange={(e)=>
@@ -96,7 +96,7 @@ const Company_Info=()=>{
                  
                       <h1 className='mt-2 text-[#1B2340] font-bold text-sm'>About company </h1>
                       <textarea type='text' rows={3} id="about" name='about'
-                        className='border border-[#d4d5d6] p-3 bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
+                        className='text-sm border border-[#d4d5d6] p-3 bg-[#F5F6FA] rounded-xl focus:border-[#3D5AFE] focus:ring-1 focus:ring-[#3D5AFE] outline-none'
 
                         value={about}
                       onChange={(e)=>
@@ -112,7 +112,7 @@ const Company_Info=()=>{
               <button className=' text-sm flex flex-wrap justify-end
                rounded-xl px-3 py-3 font-semibold bg-[#3D5AFE] text-white'
                  onClick={()=>{
-                  setActive('Logo and hiring plans')
+                  setActive('Logo & hiring plans')
                  }}
                >Save and continue</button>
             </div>

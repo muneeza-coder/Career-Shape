@@ -213,7 +213,7 @@
 // //     )
 // // }
 
-// // export default SliderContent
+// export default SliderContent
 // import React from 'react'
 // import CompanycardHero from './CompanycardHero'
 // import JobseekerCardHero from './JobseekerCardHero'
@@ -374,3 +374,31 @@ const ComanyHome = () => {
     )
 }
 export default ComanyHome
+// import React, { useContext } from 'react'
+// import CompanycardHero from './CompanycardHero'
+// import JobseekerCardHero from './JobseekerCardHero'
+// import { HomeContextSection } from './HomeContext/HomeContext'
+// import Pip2 from './Pip2'
+
+// const ComanyHome = () => {
+//     const { sectionScroll } = useContext(HomeContextSection)
+//     return (
+//         //for mobiles  ml-48 mr-48
+//         <div className=' w-[full]  flex flex-col items-center justify-center md:flex-row md:justify-between '>
+//             <div className='w-full justify-center items-center flex flex-col lg:mr-10 xl:mr-12 md:mr-5'>
+//                 <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] text-sm px-2 py-1 rounded-full max-w-32 font-semibold mb-5 flex justify-center '>For companies</h6>
+//                 <h1 style={{ color: "linear-gradient(to right ,#4A3AFF,#2B2299)" }} className=' font-extrabold text-5xl   flex flex-wrap text-center md:text-6xl '>Shape your team around the right people</h1>
+
+//                 <p className='text-[#6B7391]  mt-5 flex flex-wrap text-lg'>Career Shape helps small teams post jobs, track candidates and see who fits best, using AI skill matching</p>
+//                 <div className='mt-7 flex gap-2'>
+//                     <button className='bg-[#E8ECFF] min-[360px]:px-3  text-[#3D5AFE] px-6 py-3  rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95 '>Start hiring</button>
+//                     <button className=' bg-[#E8ECFF]  text-[#3D5AFE]   px-5 py-3 rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95' onClick={() => {
+//                         sectionScroll('work')
+//                     }}>See how it works</button>
+//                 </div>
+//             </div>
+
+//         </div>
+//     )
+// }
+// export default ComanyHome
