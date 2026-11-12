@@ -12,7 +12,7 @@ const Education = () => {
     </div>
     <div className="w-full px-5  rounded-xl bg-white flex flex-col  mt-3 py-8 text-sm text-[#6B7391] gap-3">
       <div>No education added yet.</div>
-    <form className='flex flex-col gap-8' >
+    <form className='flex flex-col gap-12' >
       <div className="flex justify-between w-full gap-2">
       <div className="flex flex-col gap-2 w-1/2">
       <label className="text-sm font-bold text-[#1B2340]">Degree</label>

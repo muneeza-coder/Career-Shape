@@ -18,7 +18,7 @@ const Skill = () => {
       <input type="text" placeholder= "Add a skill" className="w-full px-4 py-3 bg-[#F5F6FA] rounded-xl text-gray-800"></input>
       <div>
        <button type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
-            +Add
+            Add
           </button>
           </div>
           {/* <div>
@@ -26,12 +26,12 @@ const Skill = () => {
           </div> */}
     </div>
      <div className="">
-            <p>No skills yet</p>
-            <p>Suggested skills(click to add)</p>
+            <p className='text-[#6B7391] text-xs'>No skills yet</p>
+            <p className='text-[#6B7391] text-xs mt-3'>Suggested skills(click to add)</p>
           </div>
-    <div className='flex gap-2 flex-wrap'>
+    <div className='flex gap-2 flex-wrap '>
         {skills.map((el)=>{
-            return <div className='flex gap-1  rounded-xl border text-[#3D5AFE] border-[#3D5AFE]'>
+            return <div className='flex gap-1  rounded-full border text-[#3D5AFE] border-[#3D5AFE] px-2 py-1 text-xs font-bold'>
         <p>+</p>
                 <p>{el}</p>
                 </div>
@@ -41,7 +41,10 @@ const Skill = () => {
     </form>
     </div>
     <div className="flex items-center justify-between pt-6 ">
-<button type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
+<button onClick={()=>{
+   setchoice("Experience")
+}}
+  type="button" className="px-6 py-2.5 border border-gray-300 text-[#3D5AFE]  rounded-xl hover:bg-gray-50 bg-[#E8ECFF] font-bold">
             Back
           </button>
           <button onClick={()=>{
