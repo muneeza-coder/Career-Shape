@@ -133,8 +133,9 @@ button {
   --color-ink: var(--ink);
 }
 
+/* 
 /* ---------- site colours (light and dark) ---------- */
-:root {
+/* :root {
   --bg: #F5F6FA;
   --ink: #1B2340;
   --card: #fff;
@@ -146,9 +147,9 @@ button {
     --ink: #EEF0FA;
     --card: #181F38;
   }
-}
+} */
 
-body {
+*/ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
