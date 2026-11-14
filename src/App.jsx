@@ -152,17 +152,19 @@ const App = () => {
       className='flex flex-col h-full w-full '>
       {/* <NetBackground /> */}
       <Routes>
-        <Route path='/' element={<Main />} />
+        <Route path='/' element={<MainPart />} />
+        <Route path='home' element={<Main />} />
+
         <Route path='/Signup' element={<Signup1 />} />
         <Route path='/login' element={<Login1 />} />
         <Route path='/aboutYou' element={<AboutYou />} />
         <Route path='/sidebar' element={<SideBar />} />
         <Route path='/jobseekerprofile' element={<AboutYou />} />
-        =        <Route path='/Company_Detail' element={< Company_detail />} />
+        <Route path='/Company_Detail' element={< Company_detail />} />
         <Route path='/Company_Dashboard' element={<Company_DB />} />
         <Route path='/adminprofile' element={<AdminProfile />} />
         <Route path='/admindashboard' element={<AdminDashboard />} />
-        <Route path="/splashscreen" element={<MainPart />} />
+        {/* <Route path="/splashscreen" element={<MainPart />} /> */}
       </Routes>
     </div>
   )

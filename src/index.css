@@ -186,3 +186,41 @@ button:active {
 #scbar::-webkit-scrollbar {
   display: none;
 }
+
+/* //ye hamay hamaray steps batata ha jo ainmation me ho ga
+translateY(0) se murad apni position per aye ga
+translateY(-10) se murad apni position se uper jaye ga kitna distance uper */
+/* ease-in-out	Starts slowly, speeds up, then slows down */
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#floatdiv {
+  animation: float 3s ease-in-out infinite;
+
+}
+
+
+#floatdiv2 {
+  animation: float 3s ease-in-out infinite;
+
+}
+
+#floatdiv3 {
+  animation: float 3s ease-in-out infinite;
+
+}
+
+#floatdiv4 {
+  animation: float 3s ease-in-out infinite;
+
+}

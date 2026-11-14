@@ -25,7 +25,7 @@ const MainPart = () => {
                         <Steps />
                     </div>
                     <div className='flex justify-between items-center px-95 w-full '>
-                        <p className='text-[12px] font-bold text-[#6B7391]'>Steps</p>
+                        <p className='text-[12px] font-bold text-[#6B7391]'>Steps </p>
                         <button className='bg-[#3D5AFE] text-white px-5 rounded-xl font-bold py-3'>Enter Career Shape →</button>
                     </div>
                 </div>
