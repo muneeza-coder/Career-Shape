@@ -356,12 +356,18 @@ const ComanyHome = () => {
     const { sectionScroll } = useContext(HomeContextSection)
     return (
         //for mobiles  ml-48 mr-48
-        <div className=' w-[full]  flex flex-col justify-center md:flex-row md:justify-between '>
-            <div className='flex flex-col lg:mr-10 xl:mr-12 md:mr-5 mt-20'>
+        <div id="companycard" className=' w-[full]  flex flex-col justify-center md:flex-row md:justify-between '>
+            <div className='flex flex-col lg:mr-5 xl:mr-12 md:mr-5 mt-20'>
                 <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] text-sm px-2 py-1 rounded-full max-w-32 font-semibold mb-5 flex justify-center '>For companies</h6>
-                <h1 className=' font-extrabold text-5xl  text-[#1B2340] flex flex-wrap sm:max-w-4xl md:max-w-2xl  md:text-6xl '>Shape your team around the right people</h1>
+                {/* <h1 style={{color:`linear-gradient()`}} className=' font-extrabold text-5xl  text-[#1B2340] flex flex-wrap sm:max-w-4xl md:max-w-2xl  md:text-6xl '>Shape your team around the right people</h1> */}
+                <h1 style={{
+                    background: `linear-gradient(120deg,#1B2340 40%,#3D5AFE)`,
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    filter: 'drop-shadow(0 0 8px #3D5AFE30)'
+                }} className='pb-2 font-extrabold text-5xl  flex flex-wrap sm:max-w-4xl md:max-w-xl md:text-[39px] lg:max-w-2xl  lg:text-6xl '>Shape your team around the right people</h1>
 
-                <p className='text-[#6B7391] sm:max-w-4xl md:max-w-xl mt-5 flex flex-wrap text-lg'>Career Shape helps small teams post jobs, track candidates and see who fits best, using AI skill matching</p>
+                <p className='text-[#6B7391] sm:max-w-4xl md:max-w-sm  lg:max-w-xl mt-1 flex flex-wrap text-lg'>Career Shape helps small teams post jobs, track candidates and see who fits best, using AI skill matching</p>
                 <div className='mt-7 flex gap-2'>
                     <button className='bg-[#E8ECFF] min-[360px]:px-3  text-[#3D5AFE] px-6 py-3  rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95 '>Start hiring</button>
                     <button className=' bg-[#E8ECFF]  text-[#3D5AFE]   px-5 py-3 rounded-xl  font-bold hover:bg-[#3D5AFE] hover:text-white active:scale-95' onClick={() => {

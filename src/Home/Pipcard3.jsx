@@ -63,7 +63,7 @@ const Pipcard3 = () => {
 
     ]
     return (
-        <div className='w-full grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>npm.cmsn
+        <div className='w-full grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
             {jobs.map((el, indx) => {
                 return < div key={indx} className=' hover:shadow-xl hover:shadow-[#4A3AFF]/20 hover:scale-95 rounded-xl border-2 border-[#E4E7F1] flex flex-col gap-2 flex-wrap justify-center items-center bg-white px-10 p-5' >
                     <h3 className='text-xl text-[#1B2340] font-bold'>{el.Title}</h3>

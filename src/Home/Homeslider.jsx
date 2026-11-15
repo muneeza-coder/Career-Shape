@@ -120,7 +120,7 @@ const Homeslider = () => {
         }
     }, [stopslider])//we add dependency tha it depend on hoverd stop on hovered
     return (
-        <div className='ml-6 mr-4  mt-30 overflow-hidden h-[80%] md:ml-10 md:mr-9 xl:ml-40 xl:mr-35 2xl:ml-49 2xl:mr-60  flex justify-between flex-col'>
+        <div className='ml-6 mr-4 mt-15 md:mt-30 overflow-hidden h-[80%] md:ml-10 md:mr-9 xl:ml-40 xl:mr-35 2xl:ml-49 2xl:mr-60  flex justify-between flex-col'>
             <div
                 onMouseEnter={() => setstopslider(true)}
                 onMouseLeave={() => setstopslider(false)}
@@ -131,7 +131,7 @@ const Homeslider = () => {
                 <div className='min-w-full'><ComanyHome /></div>
                 <div className='min-w-full'><Jobseekerhome /></div>
             </div>
-            <div className='flex justify-center gap-2 mt-38 items-center  w-full'>
+            <div className='flex justify-center gap-2 mt-150 sm:mt-165 md:mt-50 lg:mt-38 items-center  w-full'>
                 <button onClick={() => {
                     if (slide === 1) {
                         setslide(0)

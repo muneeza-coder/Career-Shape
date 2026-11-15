@@ -122,17 +122,6 @@ button {
 #scbar::-webkit-scrollbar {
   display: none;
 } */
-@import "tailwindcss";
-
-@theme {
-  --font-sans: 'Manrope', sans-serif;
-
-  /* optional: lets you use bg-page, bg-surface, text-ink in Tailwind classes */
-  --color-page: var(--bg);
-  --color-surface: var(--card);
-  --color-ink: var(--ink);
-}
-
 /* 
 /* ---------- site colours (light and dark) ---------- */
 /* :root {
@@ -148,15 +137,16 @@ button {
     --card: #181F38;
   }
 } */
-
-*/ body {
+/* body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
-  /* Manrope from your @theme */
+  /* Manrope from your @theme 
   line-height: 1.6;
-}
+} */
+@import "tailwindcss";
+
 
 .page {
   max-width: 760px;
@@ -224,4 +214,100 @@ translateY(-10) se murad apni position se uper jaye ga kitna distance uper */
 #floatdiv4 {
   animation: float 3s ease-in-out infinite;
 
+}
+
+#jobcard {
+  animation: float 3s ease-in-out infinite;
+
+}
+
+#companycard {
+  animation: float 3s ease-in-out infinite;
+
+}
+
+
+/* @theme is a Tailwind CSS feature. It allows you to define custom design values that you can use in Tailwind classes.
+Code	Meaning
+--font-sans	Defines your font
+--color-page	Defines your page background color
+--color-surface	Defines your card background color
+--color-ink	Defines your text color */
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+
+  /* optional: lets you use bg-page, bg-surface, text-ink in Tailwind classes */
+  /* --color-page: var(--bg);
+  --color-surface: var(--card);
+  --color-ink: var(--ink); */
+}
+
+/* :root is where you define CSS variables globally.
+
+Think of variables as containers in which you store colors.
+Variable	Color	Purpose
+--bg	#F5F6FA	Main background
+--ink	#1B2340	Text color
+--card	#FFFFFF	Card background
+--blue	#3D5AFE	Blue gradient
+--mint	#16B890	Green gradient */
+:root {
+  --bg: #F5F6FA;
+  --ink: #1B2340;
+  --card: #FFFFFF;
+  --blue: #3D5AFE;
+  --mint: #16B890;
+}
+
+/* :root is used to define CSS variables globally.
+
+Think of variables as containers that store values.
+
+For example:
+- --blue stores your blue color.
+- --mint stores your green color.
+- --bg stores your background color.
+To use a variable, write var().
+
+Example: var(--blue).
+3. radial-gradient()
+This creates a circular or oval gradient.
+
+Your first gradient:
+radial-gradient(
+  1200px 600px at 85% -10%,
+  color-mix(in srgb, var(--blue) 10%, transparent),
+  transparent 60%
+)
+
+
+Meaning:
+- 1200px: Gradient width.
+- 600px: Gradient height.
+- 85% -10%: Position (top-right).
+- var(--blue): Uses your blue color.
+- 10%: Mixes 10% blue with transparency.
+- transparent 60%: Gradually disappears.
+Your second gradient does the same thing but creates a green glow on the left side.
+4. var(--bg)
+var(--bg);
+
+
+This is your base background color (#F5F6FA), behind both gradients.
+5. background-attachment: fixed
+background-attachment: fixed;
+
+
+Keeps the background in the same position while you scroll.
+srgb stands for Standard Red Green Blue.
+
+It is a standard color space used by screens and browsers to represent colors. */
+body {
+  background:
+    radial-gradient(1200px 600px at 85% -10%,
+      color-mix(in srgb, var(--blue) 10%, transparent), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%,
+      color-mix(in srgb, var(--mint) 8%, transparent), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
 }
