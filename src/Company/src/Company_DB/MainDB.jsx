@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import logo from '../../../assets/logo1.svg'
-import Profile from './Profile_DB/Profile.jsx'
-import Overview from './Overview_DB/Overview.jsx'
-import Candidates from './Candidates_DB/Candidates.jsx'
-import Jobs from './Jobs_DB/Jobs.jsx'
-import { LayoutDashboard, UserRound, Sparkles, BuildingComplex, Star, Bot, ArrowLeft, LogOut } from "lucide-react"
+import Profile from './Profile_CDB/Profile.jsx'
+import Overview from './Overview_CDB/Overview.jsx'
+import Candidates from './Candidates_CDB/Candidates.jsx'
+import Jobs from './Jobs_CDB/Jobs.jsx'
+import AIAgent from './AI_Agent_CDB/MainAIAgent.jsx'
+import { LayoutDashboard, UserRound,  Bot, ArrowLeft, LogOut } from "lucide-react"
+import { LuBriefcaseBusiness } from "react-icons/lu";
+import { FaUsers } from "react-icons/fa";
 const Sidebar=()=>{
 
     const [click,setClick]=useState('Profile')
@@ -12,10 +15,10 @@ const Sidebar=()=>{
     const list=[
         {name:'Profile', icon: <UserRound size={17} strokeWidth={1.5} /> },
         {name:'Overview', icon: <LayoutDashboard size={17} strokeWidth={1.5} />},
-        {name:'Candidates'},
+        {name:'Candidates',icon:<FaUsers size={17} strokeWidth={1.5}  />},
+        {name:'Jobs',icon:<LuBriefcaseBusiness size={17} strokeWidth={1.5} />},
         {name:'AI Agent',icon: <Bot size={17} strokeWidth={1.5} /> },
         {name:'Website', icon: <ArrowLeft size={17} strokeWidth={1.5} />},
-        {name:'Jobs'},
         {name:'Logout', icon: <LogOut size={17} strokeWidth={1.5} />}
 
     ]
@@ -28,7 +31,7 @@ const Sidebar=()=>{
 
              
             <div 
-             className='md:w-[230px] overflow-x-auto  overflow-y-hidden w-full gap-1 justify-evenly md:justify-start  z-50 bg-white md:h-screen md:overflow-y-auto fixed bottom-0 md:overflow-x-visible md:bottom-auto md:top-0 left-0 md:py-6 px-3 py-3 flex flex-row  flex-nowrap md:flex-col md:gap-3'
+             className='md:w-57.5 overflow-x-auto  overflow-y-hidden w-full gap-1 justify-evenly md:justify-start  z-50 bg-white md:h-screen md:overflow-y-auto fixed bottom-0 md:overflow-x-visible md:bottom-auto md:top-0 left-0 md:py-6 px-3 py-3 flex flex-row  flex-nowrap md:flex-col md:gap-3'
             // 'md:w-[230px] w-full gap-1 justify-evenly md:justify-start flex-nowrap z-50 bg-blue-500 md:h-screen md:overflow-y-auto fixed bottom-0 md:overflow-x-visible md:bottom-auto md:top-0 left-0 md:py-6 px-3 py-3 flex flex-row  flex-nowrap md:flex-col md:gap-3'
             >
                   <img src={logo} className='hidden sm:flex h-10  w-40  mb-3'></img>
@@ -67,13 +70,16 @@ const Sidebar=()=>{
                 <Profile />
              </div>
             <div className={`${Tab==='Overview'?" flex w-full md:ml-60":"hidden"}`}>
-                    <Overview/>
+                <Overview/>
             </div>
             <div className={`${Tab==='Candidates'?" flex w-full md:ml-60":"hidden"}`}>
-                    <Candidates/>
+                <Candidates/>
              </div>
             <div className={`${Tab==='Jobs'?" flex w-full md:ml-60":"hidden"}`}>
-                  <Jobs/>
+                <Jobs/>
+            </div>
+             <div className={`${Tab==='AI Agent'?" flex w-full md:ml-60":"hidden"}`}>
+                <AIAgent/>
             </div>
                 
             

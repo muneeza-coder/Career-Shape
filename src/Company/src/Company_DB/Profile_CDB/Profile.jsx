@@ -61,9 +61,9 @@ const Profile=()=>{
 
             <div className=' w-full h-35 flex flex-row  gap-3 '>
 
-                {data.map((elem)=>{
+                {data.map((elem,index)=>{
                  return(
-                    <div className='flex  flex-col justify-between  hover:shadow-xl hover:shadow-[#4A3AFF]/20 hover:scale-95  border border-gray-200 border-l-4  border-l-[#3D5AFE] bg-white rounded-xl w-1/3 p-2 sm:p-4'>
+                    <div key={index} className='flex  flex-col justify-between  hover:shadow-xl hover:shadow-[#4A3AFF]/20 hover:scale-95  border border-gray-200 hover:border  hover:border-[#3D5AFE]  bg-white rounded-xl w-1/3 p-2 sm:p-4'>
                         <h3 className='text-3xl font-bold text-[#1B2340]'>{elem.Count}</h3>
                         <h3 className='text-sm text-[#6B7391]'>{elem.About}</h3>
                     </div>

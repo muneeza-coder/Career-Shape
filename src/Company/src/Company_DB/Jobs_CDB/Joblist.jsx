@@ -16,17 +16,17 @@ const JobL=()=>{
         }
     ]
     return(
-        <div  className='  w-full   flex flex-col  px-5 py-4 '>
+        <div  className='w-full flex flex-col  px-5 py-4 '>
             {jobs.map((elem,idx)=>{
                     return(
-                        <div className="w-full  flex flex-col gap-4 py-2 ">
+                        <div  key={idx} className="w-full  flex flex-col gap-4 py-2 ">
                             <div className=" flex flex-row justify-between ">
                             <div className="flex flex-col gap-1">
                                 <h1 className="font-semibold text-[#1B2340]">{elem.job}</h1>
                                 <h3 className="text-sm text-[#6B7391]">{elem.req_emp} Candidates</h3>
                                 <div className ="flex flex-row gap-1">
-                                    {elem.skills.map((el)=>{
-                                      return <h5 className="bg-blue-100 text-[#3D5AFE] text-[13px] px-1 rounded ">{el}</h5>
+                                    {elem.skills.map((el ,index)=>{
+                                      return <h5 key={index} className="bg-blue-100 text-[#3D5AFE] text-[13px] px-1 rounded ">{el}</h5>
                                     })}
                                 </div>   
 
@@ -37,8 +37,8 @@ const JobL=()=>{
                             </div>
 
                             </div>
-                            <div className={`${ ( idx <= idx-1 )? 'w-full h-[1px] bg-gray-200':'hidden'}`}></div>
-                            
+                            {/* <div className={`${ ( idx != idx-1 )? 'w-full h-[1px] bg-gray-200':'hidden'}`}></div>
+                             */}
                         </div>
                     )
             })}
