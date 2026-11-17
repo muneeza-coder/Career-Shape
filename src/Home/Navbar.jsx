@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         //backdrop-blur-md bg-[#F5F6FA]/[99%] that home content move upward but not show in back of navbar
         // <nav className='px-2 2xl:pl-50 2xl:pr-60 xl:pl-41 xl:pr-36 py-3 backdrop-blur-md bg-[#F5F6FA]/[90%] items-center flex justify-between border-b-2 border-gray-200 fixed left-0 top-0 w-full z-50 lg:pl-8 lg:pr-10 md:pl-10 md:pr-10.5'>
-        <nav className='px-2 2xl:pl-50 2xl:pr-55 xl:pl-40 xl:pr-40 py-3 backdrop-blur-md bg-[#F5F6FA]/[90%] items-center flex justify-between border-b-2 border-gray-200 fixed left-0 top-0 w-full z-50 lg:pl-8 lg:pr-10 md:pl-10 md:pr-10.5'>
+        <nav className='px-2 2xl:pl-50 2xl:pr-55 xl:pl-40 xl:pr-40 py-3 backdrop-blur-md bg-[#f5f6fa]/[90%] items-center flex justify-between border-b-2 border-gray-200 fixed left-0 top-0 w-full z-50 lg:pl-8 lg:pr-10 md:pl-10 md:pr-10.5'>
             <img src={logo} className='w-33 h-17  block'></img>
             <div className='hidden ml-2 w-full justify-center items-center sm:flex sm:gap-10 sm:w-full sm:justify-center '>
                 <NavLink className='text-[#6B7391] font-bold text-40' to='/'>Home</NavLink>

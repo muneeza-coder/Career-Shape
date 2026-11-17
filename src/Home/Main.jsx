@@ -15,8 +15,11 @@ const Main = () => {
     return (
 
         <HomeContext>
+            {/* fadeIn = animation name.
+1s = animation duration (1 second).
+ease-in-out = starts slowly, speeds up, then slows down. */}
             <div
-                className='w-full flex flex-col mx-auto gap-20'>
+                className='animate-[fadeIn_1s_ease-in-out] w-full flex flex-col mx-auto gap-20 '>
                 <Navbar />
                 <Homeslider />
                 <NumRange />

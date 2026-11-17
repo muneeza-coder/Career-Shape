@@ -50,7 +50,7 @@ const SidebarAdmin = () => {
                 {menu.map((el) => {
 
                     return <div key={el.name}>
-                        <div onClick={() => {
+                        <button onClick={() => {
                             setactive(el.name)
                             settab(el.name)
 
@@ -59,7 +59,7 @@ const SidebarAdmin = () => {
                         >
                             <p className='flex items-center justify-center'>{el.icon}</p>
                             <p>{el.name}</p>
-                        </div>
+                        </button>
 
                     </div>
                 })}

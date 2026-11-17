@@ -356,7 +356,7 @@ const ComanyHome = () => {
     const { sectionScroll } = useContext(HomeContextSection)
     return (
         //for mobiles  ml-48 mr-48
-        <div id="companycard" className=' w-[full]  flex flex-col justify-center md:flex-row md:justify-between '>
+        <div className=' w-[full]  flex flex-col justify-center md:flex-row md:justify-between '>
             <div className='flex flex-col lg:mr-5 xl:mr-12 md:mr-5 mt-20'>
                 <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] text-sm px-2 py-1 rounded-full max-w-32 font-semibold mb-5 flex justify-center '>For companies</h6>
                 {/* <h1 style={{color:`linear-gradient()`}} className=' font-extrabold text-5xl  text-[#1B2340] flex flex-wrap sm:max-w-4xl md:max-w-2xl  md:text-6xl '>Shape your team around the right people</h1> */}

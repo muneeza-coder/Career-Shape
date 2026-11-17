@@ -178,6 +178,18 @@ button:active {
   display: none;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* //ye hamay hamaray steps batata ha jo ainmation me ho ga
 translateY(0) se murad apni position per aye ga
 translateY(-10) se murad apni position se uper jaye ga kitna distance uper */

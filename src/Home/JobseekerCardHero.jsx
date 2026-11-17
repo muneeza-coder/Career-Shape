@@ -161,10 +161,10 @@ const JobseekerCardHero = () => {
     const { sectionScroll } = useContext(HomeContextSection)
     return (
 
-        <div className='w-full md:w-1/2 mt-3 flex flex-col justify-center  relative '>
+        <div id="jobcard" className='w-full md:w-1/2 mt-3 flex flex-col justify-center  relative '>
             {/* <img src={jobseekerpic} className='rounded-3xl w-150 cover h-80 absolute top-0'></img> */}
-            <div id="floatdiv" className='w-13 h-13 rounded-full  absolute  bg-[#16B890]/[60%] blur-[3px]  top-0 right-0.5 md:right-5'></div>
-            <div id="floatdiv2" className='sm:w-10 sm:h-10 h-7 w-7 rounded-full bg-[#3D5AFE]/[60%] blur-[3px] absolute top-80 md:top-80 sm:top-100 left-0 sm:left-1 md:-left-5'></div>
+            <div id="floatdiv3" className='w-13 h-13 rounded-full  absolute  bg-[#16B890]/[60%] blur-[3px]  top-0 right-0.5 md:right-5'></div>
+            <div id="floatdiv4" className='sm:w-10 sm:h-10 h-7 w-7 rounded-full bg-[#3D5AFE]/[60%] blur-[3px] absolute top-80 md:top-80 sm:top-100 left-0 sm:left-1 md:-left-5'></div>
 
             <div
                 style={{ backgroundImage: `url(${jobseekerpic})` }}
@@ -174,7 +174,7 @@ const JobseekerCardHero = () => {
             >
             </div>
             {/* // <div className='bg-[#ffffff] lg:h-[25vh] min-[375px]:w-[46vh] min-[412px]:w-[36vh] h-full px-5 py-4 w-[46vh] min-[393px]:w-[38vh] md:w-[53vh] min-[360px]:w-[37vh] rounded-xl  border-2 border-gray-200 mt-6 lg:py-6'> */}
-            <div className='bg-[#ffffff] md:h-[92%] lg:h-[76%] blur-[0.3px] md:shadow-2xl shadow-gray-200  px-5 py-4 max-w-5xl absolute left-5 sm:left-8 md:left-3 lg:left-8 xl:left-3 top-55 sm:top-80 md:top-50 lg:top-60  w-[93%] md:w-[87%] rounded-xl  border-2 border-gray-200 lg:py-6 flex flex-col gap-3'>
+            <div className='bg-[#ffffff] md:h-[92%] lg:h-[76%] blur-[0.3px] md:shadow-2xl shadow-gray-200  px-5 py-4 max-w-5xl absolute left-5 sm:left-8 md:left-3 lg:left-4 xl:left-3 top-55 sm:top-80 md:top-50 lg:top-60  w-[93%] md:w-[87%] lg:w-[92%] xl:w-[87%] rounded-xl  border-2 border-gray-200 lg:py-6 flex flex-col gap-3'>
 
                 <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] max-w-32 text-sm px-2 py-1 rounded-full flex justify-center font-semibold '>Sample match</h6>
                 <h4 className=' text-[#1B2340] font-semibold '>Frontend Developer</h4>

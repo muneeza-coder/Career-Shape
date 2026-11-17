@@ -126,7 +126,7 @@ const Jobseekerhome = () => {
     const { sectionScroll } = useContext(HomeContextSection)
     return (
 
-        <div id="jobcard" className='w-[full] h-full  flex flex-col justify-center md:flex-row md:justify-between ' >
+        <div className='w-[full] h-full  flex flex-col justify-center md:flex-row md:justify-between ' >
             < div className='flex flex-col mt-20 lg:mr-10 xl:mr-10 md:mr-5' >
                 <h6 className='bg-[#E8ECFF]  text-[#3D5AFE] text-sm px-2 py-1 rounded-full max-w-32 font-semibold mb-5 flex justify-center '>For Jobseeker</h6>
                 {/* <h1 className="font-extrabold text-5xl  text-[#1B2340] flex flex-wrap sm:max-w-4xl md:max-w-2xl  md:text-6xl">Shape your career around the right role.</h1> */}
