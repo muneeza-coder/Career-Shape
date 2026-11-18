@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import React, { useContext } from 'react'
-import { Company_Context_Profile } from '../Company_Context/Company_Context_profile.jsx'
+import { Company_Context_Profile } from '../Company_Context/Company_Context.jsx'
 import { Navigate, useNavigate } from 'react-router-dom'
 const Logo_Info = () => {
 

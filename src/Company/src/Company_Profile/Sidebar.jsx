@@ -81,7 +81,7 @@
 // }
 // export default Sidebar;
 import React, { useContext, useState } from 'react'
-import { Company_Context_Profile } from '../Company_Context/Company_Context_profile.jsx'
+import { Company_Context_Profile } from '../Company_Context/Company_Context.jsx'
 const Sidebar = () => {
      const [percentage, setPercentage] = useState(0)
      const choices = ["Company_info", "Logo & hiring plans"]

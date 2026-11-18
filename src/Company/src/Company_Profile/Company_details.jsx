@@ -4,7 +4,7 @@ import Sidebar from './Sidebar.jsx'
 import Company_Info from './Company_Info.jsx'
 import Logo from './Logo_Info.jsx'
 import Nav from './Nav.jsx'
-import  Company_Context_Profile  from '../Company_Context/Company_Context_profile.jsx'
+import  Company_Context_Profile  from '../Company_Context/Company_Context.jsx'
 
 const Company_detail = () => {
 

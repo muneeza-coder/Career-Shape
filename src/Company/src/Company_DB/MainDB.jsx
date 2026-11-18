@@ -5,6 +5,7 @@ import Overview from './Overview_CDB/Overview.jsx'
 import Candidates from './Candidates_CDB/Candidates.jsx'
 import Jobs from './Jobs_CDB/Jobs.jsx'
 import AIAgent from './AI_Agent_CDB/MainAIAgent.jsx'
+import Company_Context  from '../Company_Context/Company_Context.jsx'
 import { LayoutDashboard, UserRound,  Bot, ArrowLeft, LogOut } from "lucide-react"
 import { LuBriefcaseBusiness } from "react-icons/lu";
 import { FaUsers } from "react-icons/fa";
@@ -23,13 +24,8 @@ const Sidebar=()=>{
 
     ]
     return(
-         <div className='flex gap-30 w-full h-screen
-        
-        '
-        
-         > 
-
-             
+        <Company_Context>
+         <div className='flex gap-30 w-full h-screen'> 
             <div 
              className='md:w-57.5 overflow-x-auto  overflow-y-hidden w-full gap-1 justify-evenly md:justify-start  z-50 bg-white md:h-screen md:overflow-y-auto fixed bottom-0 md:overflow-x-visible md:bottom-auto md:top-0 left-0 md:py-6 px-3 py-3 flex flex-row  flex-nowrap md:flex-col md:gap-3'
             // 'md:w-[230px] w-full gap-1 justify-evenly md:justify-start flex-nowrap z-50 bg-blue-500 md:h-screen md:overflow-y-auto fixed bottom-0 md:overflow-x-visible md:bottom-auto md:top-0 left-0 md:py-6 px-3 py-3 flex flex-row  flex-nowrap md:flex-col md:gap-3'
@@ -86,6 +82,7 @@ const Sidebar=()=>{
             
             
         </div>
+        </Company_Context>
     )
 }
 export default Sidebar
