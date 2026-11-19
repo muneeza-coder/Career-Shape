@@ -144,6 +144,7 @@ import Company_DB from './Company/src/Company_DB/MainDB.jsx'
 import AdminProfile from "./Admin/src/AdminDashboard/AdminProfile/AdminProfile.jsx"
 import AdminDashboard from './Admin/src/AdminDashboard/AdminDashboard.jsx'
 import MainPart from './Splash Screen/MainPart.jsx'
+import Seeker_dashboard from './Jobseeker/src/jobseeker_DB/Seeker_dashboard.jsx'
 const App = () => {
   return (
 
@@ -152,6 +153,7 @@ const App = () => {
       {/* <NetBackground /> */}
       <Routes>
         <Route path='/' element={<Main />} />
+        <Route path="jobseekdb" element={<Seeker_dashboard/>}/>
         <Route path='/Signup' element={<Signup1 />} />
         <Route path='/login' element={<Login1 />} />
         <Route path='/aboutYou' element={<AboutYou />} />

@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import { JobseekerProfileContext } from './JobseekerContext/JobseekerContext'
+import { useNavigate } from 'react-router-dom'
 const CV = () => {
+  const navigate=useNavigate()
     const {choice,setchoice}=useContext(JobseekerProfileContext)
   return (
     <div className={`w-full pl-22 pr-44 py-10 ${choice==="CV & Preferences"?"flex flex-col":"hidden"}`}>
         <div className="w-full  ">
         <h3 className="text-[#1B2340] font-extrabold text-xl">Your CV and job prefrences</h3>
-        <p className="text-[#6B7391] text-sm mt-3">Optional,but it helps us match you with the right jobs.</p>
+       
     </div>
     <div className="w-full px-5  rounded-xl bg-white flex flex-col  mt-3 py-8">
     <form className='flex flex-col gap-12' >
@@ -72,6 +74,7 @@ const CV = () => {
           </button>
           <button onClick={()=>{
             setchoice("CV & Preferences")
+            navigate("/jobseekdb")
           }} type="submit"
             className="px-6 py-2.5 bg-[#3D5AFE] text-white  rounded-xl hover:bg-blue-700 font-bold">
             Finish and open my dashboard
