@@ -14,7 +14,7 @@ const MainPart = () => {
                 <div className='w-full flex items-end justify-end '>
                     <button onClick={() => {
                         navigate("/home")
-                    }} className='m-5 hover:bg-[#3D5AFE] hover:text-white text-[#3D5AFE] rounded-xl py-2 px-3 text-sm  font-bold bg-[#E8ECFF] '>Skip</button>
+                    }} className='m-5 shadow-sm shadow-[#3D5AFE]  hover:bg-[#3D5AFE] hover:text-white text-[#3D5AFE] rounded-xl py-2 px-3 text-sm  font-bold bg-[#E8ECFF] '>Skip</button>
                 </div>
                 <div className='flex flex-col  items-center gap-3  '>
 

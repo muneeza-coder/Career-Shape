@@ -5,6 +5,7 @@ import AdminProfile from './AdminProfile/AdminProfile.jsx'
 import { LayoutDashboard, UserRound, Sparkles, BuildingComplex, Star, Bot, ArrowLeft, LogOut } from "lucide-react"
 import AdminOverview from './Admin Overview/AdminOverview'
 import AdminModerate from './AdminModerate/AdminModerate'
+import Admincompanies from './Admincompanies/Admincompanies.jsx'
 const SidebarAdmin = () => {
     const navigate = useNavigate()
     const [active, setactive] = useState("Overview")
@@ -25,7 +26,7 @@ const SidebarAdmin = () => {
             { name: "Overview", icon: <LayoutDashboard size={17} strokeWidth={1.5} /> },
             { name: "Profile", icon: <UserRound size={17} strokeWidth={1.5} /> },
             { name: "Moderate", icon: <Sparkles size={17} strokeWidth={1.5} /> },
-            { name: "Company", icon: <BuildingComplex size={17} strokeWidth={1.5} /> },
+            { name: "Companies", icon: <BuildingComplex size={17} strokeWidth={1.5} /> },
             { name: "Jobseeker", icon: <Star size={17} strokeWidth={1.5} /> },
 
             { name: "AI Agent", icon: <Bot size={17} strokeWidth={1.5} /> },
@@ -72,8 +73,11 @@ const SidebarAdmin = () => {
                 <AdminOverview />
             </div>
 
-            <div className={`${tab === "Moderate" ? "flex flex-col ml-60 w-full" : "hidden"}`}>
+            <div className={`${tab === "Moderate" ? "flex flex-col md:ml-60 w-full" : "hidden"}`}>
                 <AdminModerate />
+            </div>
+            <div className={`${tab === "Companies" ? "flex flex-col md:ml-60 w-full" : "hidden"}`}>
+                <Admincompanies />
             </div>
         </div>
     )
