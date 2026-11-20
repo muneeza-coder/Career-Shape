@@ -2,7 +2,7 @@ import React from 'react'
 
 const Overview = () => {
   return (
-    <div className="w-full h-full flex flex-col ml-7 mt-22">
+    <div className="w-full h-full flex flex-col gap-3 ml-7 mt-22 pr-5 mb-5">
     {/* <div>
     <div>Demo view:</div>
     <label className="text-sm font-bold text-[#1B2340]"></label>
@@ -14,9 +14,9 @@ const Overview = () => {
     </div> */}
     <div>
 <h3 className="text-[#1B2340] font-extrabold text-3xl">Hi, rfft</h3>
- <p className="text-[#6B7391] text-medium mt-3">Your job search at a glance.</p>
+ <p className="text-[#6B7391] text-medium ">Your job search at a glance.</p>
     </div>
-        <div className=' grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3 mt-7 pr-5 '>
+        <div className=' grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3  '>
 
         <div className='border border-gray-300 hover:shadow-xl hover:shadow-[#4A3AFF]/20 hover:scale-95 p-5 flex flex-col justify-center items-start gap-2 rounded-xl bg-white'>
 <h3 className="text-[#1B2340] font-extrabold  text-3xl">20%</h3>
@@ -34,6 +34,35 @@ const Overview = () => {
 <h3 className="text-[#1B2340] font-extrabold text-3xl">0</h3>
  <p className="text-[#6B7391] text-sm mt-3">Good matches</p>
         </div>
+        
+    </div>
+     <div className=" bg-white rounded-xl px-5  w-full flex flex-col  gap-3 py-3 border border-gray-300 hover:shadow-xl hover:shadow-[#4A3AFF]/20 hover:scale-95">
+                    <h3 className=" font-bold text-black text-[15px]">Profile completion</h3>
+                    {/* <h3 className=" font-bold text-blue-800 text-[15px] text-sm">17%</h3> */}
+                    <div className="w-full rounded-full h-3 bg-gray-300 ">
+                        <div className="w-[20%] bg-[#2DD4A7] rounded-l-full h-full" ></div>
+                    </div>
+                        <h3 className="  text-[#6B7391]  text-sm ">Save your CV and apply to a job to reach 100%</h3>
+
+
+    </div>
+    <div className='bg-white rounded-xl border flex flex-col  border-gray-300 px-5 py-8 gap-5  '>
+<div className='font-bold text-black'>✨Recommended for you
+  <hr className="border-t border-gray-300" />
+</div>
+<div className='font-bold text-black'>Frontend Developer
+  <h3 className="  text-[#6B7391]  text-sm font-medium">Skill to build:react</h3>
+  <hr className="border-t border-gray-300" />
+</div>
+<div className='font-bold text-black'>Product Designer
+  <h3 className="  text-[#6B7391]  text-sm font-medium">Skill to build:figma</h3>
+  <hr className="border-t border-gray-300" />
+</div>
+
+<div className='font-bold text-black'>Sales Manager
+  <h3 className="  text-[#6B7391]  text-sm font-medium ">Skill to build:negotiation</h3>
+
+</div>
     </div>
     </div>
     

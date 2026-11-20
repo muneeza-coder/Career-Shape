@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import logo from '../../../assets/logo1.svg'
-import { LayoutDashboard, UserRound, Sparkles, BuildingComplex, Star, Bot, ArrowLeft, LogOut } from "lucide-react"
+import { LayoutDashboard, ClipboardList, PanelsTopLeft, CircleUserRound, Check, CircleUser, ArrowLeft, LogOut } from "lucide-react"
 import Overview from './Overview'
 const DB_sidebar = () => {
      const [click,setClick]=useState('Overview')
         const [Tab,setTab]=useState("Overview")
         const list=[
               {name:'Overview', icon: <LayoutDashboard size={17} strokeWidth={1.5} />},
-                   {name:'Jobs', icon: <UserRound size={17} strokeWidth={1.5} /> },
-                   {name:'CV'},
-                   {name:'Applied', icon: <UserRound size={17} strokeWidth={1.5} /> },
-                   {name:'Result',icon: <Bot size={17} strokeWidth={1.5} /> },
-                   {name:'Profile', icon: <ArrowLeft size={17} strokeWidth={1.5} />},
-                    {name:'Website', icon: <LogOut size={17} strokeWidth={1.5} />},
+                   {name:'Jobs', icon: <ClipboardList size={17} strokeWidth={1.5} /> },
+                   {name:'CV', icon: <PanelsTopLeft size={17} strokeWidth={1.5} />},
+                   {name:'Applied', icon: <CircleUserRound size={17} strokeWidth={1.5} /> },
+                   {name:'Result',icon: <Check size={17} strokeWidth={1.5} /> },
+                   {name:'Profile', icon: <CircleUser size={17} strokeWidth={1.5} />},
+                    {name:'Website', icon: <ArrowLeft size={17} strokeWidth={1.5} />},
                    {name:'Logout', icon: <LogOut size={17} strokeWidth={1.5} />}
     
         ]
