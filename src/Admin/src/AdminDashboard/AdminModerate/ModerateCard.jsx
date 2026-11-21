@@ -113,9 +113,9 @@ const ModerateCard = () => {
                     </div>
                     <div className='flex flex-wrap sm:flex-nowrap  gap-2 justify-center items-center'>
                         <p className=" shrink-0 bg-[#e5484d1c] font-extrabold text-xs  text-[#E5484D] p-2 h-fit rounded-full ">{el.risk}% risk</p>
-                        <button className="shrink-0 text-[#3D5AFE] font-bold text-xs bg-[#E8ECFF] p-2 h-fit rounded-xl">Mark safe</button>
-                        <button className="shrink-0 text-[#3D5AFE] font-bold text-xs bg-[#E8ECFF] p-2 h-fit rounded-xl" >Review</button>
-                        <button className="shrink-0 text-white text-xs font-bold bg-[#3D5AFE] p-2 h-fit rounded-xl" onClick={() => {
+                        <button className="shrink-0 text-[#3D5AFE] font-bold text-xs bg-[#E8ECFF] px-2 py-1 h-fit rounded">Mark safe</button>
+                        <button className="shrink-0 text-[#3D5AFE] font-bold text-xs bg-[#E8ECFF] px-2 py-1  h-fit rounded" >Review</button>
+                        <button className="shrink-0 text-white text-xs font-bold bg-[#3D5AFE] px-2 py-1 h-fit rounded" onClick={() => {
                             setlist(list.filter((item, index) => index !== indx))
                         }}>Remove</button>
                     </div>

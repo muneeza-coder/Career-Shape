@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import logo from '../../../assets/logo1.svg'
 import { useNavigate } from 'react-router-dom'
 import AdminProfile from './AdminProfile/AdminProfile.jsx'
-import { LayoutDashboard, UserRound, Sparkles, BuildingComplex, Star, Bot, ArrowLeft, LogOut } from "lucide-react"
+import { LayoutDashboard, UserRound, Sparkles, BuildingComplex, Star, Bot, ArrowLeft, LogOut, UserSearch } from "lucide-react"
 import AdminOverview from './Admin Overview/AdminOverview'
 import AdminModerate from './AdminModerate/AdminModerate'
 import Admincompanies from './Admincompanies/Admincompanies.jsx'
@@ -27,7 +27,9 @@ const SidebarAdmin = () => {
             { name: "Profile", icon: <UserRound size={17} strokeWidth={1.5} /> },
             { name: "Moderate", icon: <Sparkles size={17} strokeWidth={1.5} /> },
             { name: "Companies", icon: <BuildingComplex size={17} strokeWidth={1.5} /> },
-            { name: "Jobseeker", icon: <Star size={17} strokeWidth={1.5} /> },
+            // { name: "Jobseeker", icon: <Star size={17} strokeWidth={1.5} /> },
+            { name: "Jobseeker", icon: <UserSearch size={16} strokeWidth={1.5} /> },
+
 
             { name: "AI Agent", icon: <Bot size={17} strokeWidth={1.5} /> },
             { name: "Website", icon: <ArrowLeft size={17} strokeWidth={1.5} /> },

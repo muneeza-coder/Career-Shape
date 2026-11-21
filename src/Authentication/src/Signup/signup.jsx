@@ -36,7 +36,7 @@ const SignUp = () => {
         <button className='text-[#6B7391] font-bold flex flex-row gap-2 
                    cursor-pointer'
           onClick={() => {
-            navigate('/')
+            navigate('/home')
           }}
 
         >
