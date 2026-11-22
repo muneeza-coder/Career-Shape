@@ -1,34 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Pipeline from './CandidatePipline.jsx'
 const Candidate=()=>{
+
+    const [apply,setApply]=useState(0)
+    const [screen,setScreen]=useState(0)
+    const [interview,setInterview]=useState(0)
+    const [offer,setOffere]=useState(0)
+    const [hired,setHired]=useState(0)
+      
      const info=[
         {"About":"Total Candidates",
-            "Count":"5"
+            "Count":"4"
         },
         {"About":"Under Reviewed",
-            "Count":"8"
+             "Count":"4"
         },
         {'About':"Shortlisted",
-            "Count":"9"
+           "Count":"4"
         },
         {'About':"Interviewed",
-            "Count":"4"
+          "Count":"4"
         },
          {'About':"Hired",
-            "Count":"4"
+           "Count":"4"
         },
          {'About':"Rejected",
             "Count":"4"
         }
     ]
     return(
-        <div className=' w-full px-10 pt-14 pb-25 flex flex-col gap-5  '>
+        <div className=' w-full px-8 py-20  flex flex-col gap-5  '>
            <div className="bg-transparent w-full flex flex-col sm:flex-row justify-between gap-2 sm:gap-0"> 
                  <div  className='  flex flex-col justify-start gap-2  '>
                     <h1 className='text-3xl text-[#1B2340] font-bold'>Candidates</h1>
                     <h4 className=' text-[#6B7391]'>Move people through your pipeline.</h4>
                  </div>
                  <div className=' flex flex-col justify-between gap-2 pr-10'>
+                     <input type='text' placeholder='Search by name' className='border  border-gray-200 rounded-xl p-2  focus:border-[#3D5AFE] focus:ring focus:ring-[#3D5AFE] outline-none bg-[#F5F6FA]'/>
                     <button className=" w-fit bg-[#3D5AFE] text-white  px-4 py-3 rounded-xl  text-sm font-semibold  hover:shadow-xl hover:shadow-[#4A3AFF]/20 hover:scale-95">Add Candidates</button>
                  </div>
             </div>
@@ -42,17 +50,13 @@ const Candidate=()=>{
                     )
                 })}
             </div>
-            <div className='w-full flex gap-2 border border-gray-200 p-1  hover:border  hover:border-[#3D5AFE] bg-white rounded-xl'>
-                {/* <input type='text' placeholder='Search by name' className='border  border-gray-200 rounded-xl p-2 focus:border-[#3D5AFE] focus:ring focus:ring-[#3D5AFE] outline-none bg-[#F5F6FA]'/> */}
+            {/* <div className='w-full flex gap-2 border border-gray-200 p-1  hover:border  hover:border-[#3D5AFE] bg-white rounded-xl'>
+               
                <input type='text' placeholder='Search by name' className='border-0.5  border-gray-200 rounded-xl p-2  focus:border-[#3D5AFE] focus:ring focus:ring-[#3D5AFE] outline-none bg-[#F5F6FA]'/>
 
-                {/* <Select>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                </Select> */}
-            </div>
-            <div>
+                
+            </div> */}
+            <div className='w-full py-10'>
                 <Pipeline/>
             </div>
             

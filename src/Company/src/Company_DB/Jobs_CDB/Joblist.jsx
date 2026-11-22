@@ -18,9 +18,11 @@ const JobL=()=>{
     return(
         <div  className='w-full flex flex-col  px-5 py-4 '>
             {jobs.map((elem,idx)=>{
+                
+                console.log(idx)
                     return(
-                        <div  key={idx} className="w-full  flex flex-col gap-4 py-2 ">
-                            <div className=" flex flex-row justify-between ">
+                        <div  key={idx} className="w-full  flex flex-col  py-2 ">
+                            <div className=" flex  flex-col sm:flex-row justify-between gap-2 ">
                             <div className="flex flex-col gap-1">
                                 <h1 className="font-semibold text-[#1B2340]">{elem.job}</h1>
                                 <h3 className="text-sm text-[#6B7391]">{elem.req_emp} Candidates</h3>
@@ -32,13 +34,13 @@ const JobL=()=>{
 
                                 
                             </div>
-                            <div className='flex justify-center items-center'>
+                            <div className='flex justify-end items-end sm:justify-center sm:items-center'>
                                 <button className=' flex justify-center items-center rounded-xl bg-blue-100 text-[#3D5AFE] px-5 py-3 text-[15px]  font-semibold  hover:shadow-xl hover:shadow-[#4A3AFF]/20 hover:scale-95'>Remove</button>
                             </div>
 
                             </div>
-                            {/* <div className={`${ ( idx != idx-1 )? 'w-full h-[1px] bg-gray-200':'hidden'}`}></div>
-                             */}
+                            <div className='w-full mt-3 h-[1px] bg-gray-200'></div>
+                            
                         </div>
                     )
             })}

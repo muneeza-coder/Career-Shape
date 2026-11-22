@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import React, { useContext } from 'react'
-import { Company_Context_Profile } from '../Company_Context/Company_Context.jsx'
+import {Context} from '../Company_Context/Company_Context.jsx'
 import { Navigate, useNavigate } from 'react-router-dom'
 const Logo_Info = () => {
 
-   const{active,setActive}=useContext(Company_Context_Profile)
+   const{active,setActive}=useContext(Context)
    const navigate=useNavigate()
 const[logo,setLogo]=useState()
 //   const back=()=>{

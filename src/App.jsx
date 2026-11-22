@@ -158,7 +158,7 @@ const App = () => {
         <Route path='/aboutYou' element={<AboutYou />} />
         <Route path='/sidebar' element={<SideBar />} />
         <Route path='/jobseekerprofile' element={<AboutYou />} />
-        =        <Route path='/Company_Detail' element={< Company_detail />} />
+        <Route path='/Company_Detail' element={< Company_detail />} />
         <Route path='/Company_Dashboard' element={<Company_DB />} />
         <Route path='/adminprofile' element={<AdminProfile />} />
         <Route path='/admindashboard' element={<AdminDashboard />} />

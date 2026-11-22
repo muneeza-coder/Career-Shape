@@ -81,11 +81,11 @@
 // }
 // export default Sidebar;
 import React, { useContext, useState } from 'react'
-import { Company_Context_Profile } from '../Company_Context/Company_Context.jsx'
+import {Context} from '../Company_Context/Company_Context.jsx'
 const Sidebar = () => {
      const [percentage, setPercentage] = useState(0)
      const choices = ["Company_info", "Logo & hiring plans"]
-     const { active, setActive } = useContext(Company_Context_Profile)
+     const{active,setActive}=useContext(Context)
      const currentIndx = choices.indexOf(active)
      console.log("choice", currentIndx)
      return (

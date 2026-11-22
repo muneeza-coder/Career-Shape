@@ -1,15 +1,20 @@
 import React, { createContext, useState } from 'react'
-export const Company_Context_Profile=createContext()
-const Context_Company=(props)=>{
+export const Context=createContext()
+
+const Context_CS=(props)=>{
     const [active,setActive]=useState('Company_info')
-    const[dep,setDep]=useState(null)
-    const[job,setJob]=useState(null)
+    const[currrent_active,setCurrent_active]=useState('Job basics')
+    const[dep,setDep]=useState('')
+    const[job,setJob]=useState('')
+     const[city,setCity]=useState('')
+      const[emp_type,setEmp_type]=useState('')
     return(
         <div>
-            <Company_Context_Profile.Provider value={{active,setActive,dep,setDep,job,setJob}}>
+            <Context.Provider value={{active,setActive,dep,setDep,job,setJob,city,setCity,emp_type,setEmp_type ,currrent_active,setCurrent_active}}>
                   {props.children}
-            </Company_Context_Profile.Provider>
+            </Context.Provider>
+            
         </div>
     )
 }
-export default Context_Company
+export default Context_CS

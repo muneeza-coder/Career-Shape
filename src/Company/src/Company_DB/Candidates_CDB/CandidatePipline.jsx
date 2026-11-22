@@ -193,7 +193,306 @@
 //     )
 // }
 // export default CandidatePipeline
+// import React, { useState } from 'react'
+// const CandidatePipeline=()=>{
+
+//     const AppliedCandidate=[
+            
+//         {
+//             'shortName':'AB',
+//             'Name':"AliBaba",
+//             'Jobtype':'Sales manager',
+//             'Experience':'4',
+//             'MissingSkills':['react','html'],
+//             'Matchpercentage':'25'
+    
+//         },
+//          {
+//             'shortName':'AB',
+//             'Name':"Ahmed Bilal",
+//             'Jobtype':'Sales manager',
+//             'Experience':'4',
+//             'MissingSkills':['react','html'],
+//             'Matchpercentage':'25'
+    
+//         }
+//      ]
+//     const  ScreenedCandidate=[
+       
+//         {
+//             'shortName':'MZ',
+//             'Name':"Muneeza Zia",
+//             'Jobtype':'Sales manager',
+//             'Experience':'4',
+//             'MissingSkills':['react','html'],
+//             'Matchpercentage':'25'
+//         },
+//        {
+//             'shortName':'BN',
+//             'Name':"Bisma Noor",
+//             'Jobtype':'Sales manager',
+//             'Experience':'4',
+//             'MissingSkills':['react','html'],
+//             'Matchpercentage':'25'
+//        }
+//     ] 
+
+//     const InterviewedCandidate=[
+        
+//         { 
+//           'shortName':'ZI',
+//           'Name':"Zainab Ilyas",
+//           'Jobtype':'Sales manager',
+//           'Experience':'4',
+//           'MissingSkills':['react','html'],
+//           'Matchpercentage':'95'
+//         },
+//         {
+//           'shortName':'TN',
+//           'Name':"Tahniat",
+//           'Jobtype':'Sales manager',
+//           'Experience':'4',
+//           'MissingSkills':['react','html'],
+//           'Matchpercentage':'60'
+//         }
+//     ]
+//     const OfferedCandidate=[
+         
+//             {
+//                 'shortName':'AB',
+//             'Name':"Bisma",
+//             'Jobtype':'Sales manager',
+//             'Experience':'4',
+//             'MissingSkills':['react','html'],
+//             'Matchpercentage':'25'
+         
+//         },
+//     ]
+//     const HiredCandidate=[
+//       {
+//             'shortName':'AA',
+//             'Name':"Alya",
+//             'Jobtype':'Sales manager',
+//             'Experience':'4',
+//             'MissingSkills':['react','html'],
+//             'Matchpercentage':'85'
+         
+//         }
+//     ] 
+//     return(
+//         <div className='w-full  flex gap-2 mb-30 rounded-xl grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] overflow-x-auto '>
+//              <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+//                 <div>
+//                     <h1 className='w-full font-bold text-[#6B7391] flex items-start justify-baseline'>Applied</h1>
+//                 </div>
+                
+//                 {AppliedCandidate.map((elem,index)=>{
+//                      const percentage=elem.Matchpercentage 
+//                     return(
+                          
+//                         <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col'>
+                          
+//                             <div className='w-full flex flex-col gap-3 '>
+//                                <div className='flex gap-2 items-center'>
+//                                   <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
+//                                   <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
+//                                </div>
+//                                <div className='w-full flex flex-col gap-3' >
+//                                     <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
+//                                         <h5>{elem.Jobtype}</h5>
+//                                         <h5> .{elem.Experience}yrs</h5>
+//                                     </div>
+//                                     <div className='flex flex-row '>
+//                                     <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing skills:</h5>
+//                                      <div   className=' flex gap-1'>
+//                                     {elem.MissingSkills.map((el,index)=>{
+//                                         return(
+                                        
+//                                                 <h4  key={index} className="bg-red-100 text-red-500  text-[13px] px-1 rounded ">{el}</h4>
+                                           
+//                                         )
+//                                     })}
+//                                     </div>
+//                                     </div>
+//                                 </div>
+//                                 <div className={`font-bold text-sm  p-2 rounded-full flex flex-wrap items-center justify-center
+//                                     ${percentage<=60?"bg-amber-100 text-amber-500":"bg-green-100 text-green-600"}`}>{elem.Matchpercentage}% match</div>
+
+//                             </div>
+//                         </div>
+//                     )
+//                 })}
+//              </div>
+             
+//              <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+//                     <div>
+//                         <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Screening</h1>
+//                     </div>
+//                 {ScreenedCandidate.map((elem,index)=>{
+//                      const percentage=elem.Matchpercentage 
+//                     return(
+//                         <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
+//                             <div className='w-full flex flex-col gap-3 '>
+//                                <div className='flex gap-2 items-center'>
+//                                   <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
+//                                   <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
+//                                </div>
+//                                <div className='w-full flex flex-col  gap-3' >
+//                                     <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
+//                                         <h5>{elem.Jobtype}</h5>
+//                                         <h5> .{elem.Experience}yrs</h5>
+//                                     </div>
+//                                     <div className='flex flex-row '>
+//                                     <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing skills:</h5>
+//                                      <div   className=' flex gap-1'>
+//                                     {elem.MissingSkills.map((el,index)=>{
+//                                         return(
+                                        
+//                                                 <h4  key={index} className="bg-red-100 text-red-500  text-[13px] px-1 rounded ">{el}</h4>
+                                           
+//                                         )
+//                                     })}
+//                                     </div>
+//                                     </div>
+//                                 </div>
+//                                  <div className={`font-bold text-sm  p-2 rounded-full flex flex-wrap items-center justify-center
+//                                     ${percentage<=60?"bg-amber-100 text-amber-500":"bg-green-100 text-green-600"}`}>{elem.Matchpercentage}% match</div>
+
+//                             </div>
+//                         </div>
+//                     )
+//                 })}
+//              </div>
+          
+//              <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+//                 <div>
+//                     <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Interview</h1>
+//                 </div>
+//                 {InterviewedCandidate.map((elem,index)=>{
+//                      const percentage=elem.Matchpercentage 
+//                    return(
+//                         <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
+//                             <div className='w-full flex flex-col  gap-3 '>
+//                                <div className='flex gap-2 items-center'>
+//                                   <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
+//                                   <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
+//                                </div>
+//                                <div className='w-full flex flex-col  gap-3' >
+//                                     <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
+//                                         <h5>{elem.Jobtype}</h5>
+//                                         <h5> .{elem.Experience}yrs</h5>
+//                                     </div>
+//                                      <div className='flex flex-row '>
+//                                     <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing skills:</h5>
+//                                      <div   className=' flex gap-1'>
+//                                     {elem.MissingSkills.map((el,index)=>{
+//                                         return(
+                                        
+//                                                 <h4  key={index} className="bg-red-100 text-red-500  text-[13px] px-1 rounded ">{el}</h4>
+                                           
+//                                         )
+//                                     })}
+//                                     </div>
+//                                     </div>
+//                                 </div>
+//                             <div className={`font-bold text-sm  p-2 rounded-full flex flex-wrap items-center justify-center
+//                                     ${percentage<=60?"bg-amber-100 text-amber-500":"bg-green-100 text-green-600"}`}>{elem.Matchpercentage}% match</div>
+
+//                             </div>
+//                         </div>
+//                     )
+//                 })}
+//              </div>
+//               <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+//                 <div>
+//                     <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Offered</h1>
+//                 </div>
+//                 {OfferedCandidate.map((elem,index)=>{
+//                      const percentage=elem.Matchpercentage 
+//                     return(
+//                         <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
+//                             <div className='w-full flex flex-col gap-3 '>
+//                                <div className='flex gap-2 items-center'>
+//                                   <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
+//                                   <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
+//                                </div>
+//                                <div className='w-full flex flex-col  gap-3' >
+//                                     <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
+//                                         <h5>{elem.Jobtype}</h5>
+//                                         <h5> .{elem.Experience}yrs</h5>
+//                                     </div>
+//                                     <div className='flex flex-row '>
+//                                     <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing skills:</h5>
+//                                      <div   className=' flex gap-1'>
+//                                     {elem.MissingSkills.map((el,index)=>{
+//                                         return(
+                                        
+//                                                 <h4  key={index} className="bg-red-100 text-red-500 text-[13px] px-1 rounded ">{el}</h4>
+                                           
+//                                         )
+//                                     })}
+//                                     </div>
+//                                     </div>
+//                                 </div>
+//                                  <div className={`font-bold text-sm  p-2 rounded-full flex flex-wrap items-center justify-center
+//                                     ${percentage<=60?"bg-amber-100 text-amber-500":"bg-green-100 text-green-600"}`}>{elem.Matchpercentage}% match</div>
+
+//                             </div>
+//                         </div>
+//                     )
+//                 })}
+//              </div>
+//               <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+//                 <div>
+//                     <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Hired</h1>
+//                 </div>
+//                 {HiredCandidate.map((elem,index)=>{
+//                      const percentage=elem.Matchpercentage 
+//                     return(
+//                         <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
+//                             <div className='w-full flex flex-col gap-3 '>
+//                                <div className='flex gap-2 items-center'>
+//                                   <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
+//                                   <h2 className='font-bold text-[#6B7391] text-sm'>{elem.Name}</h2>
+//                                </div>
+//                                <div className='w-full flex flex-col  gap-3' >
+//                                     <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
+//                                         <h5>{elem.Jobtype}</h5>
+//                                         <h5> .{elem.Experience}yrs</h5>
+//                                     </div>
+//                                      <div className='flex flex-row '>
+//                                     <h5 className='flex flex-row w-full gap-1  text-[13px] text-gray-500'>Missing skills:</h5>
+//                                      <div   className=' flex gap-1'>
+//                                     {elem.MissingSkills.map((el,index)=>{
+//                                         return(
+                                        
+//                                                 <h4  key={index} className="bg-red-100 text-red-500 text-[13px] px-1 rounded ">{el}</h4>
+                                           
+//                                         )
+//                                     })}
+//                                     </div>
+//                                     </div>
+//                                 </div>
+//                                  <div className={`font-bold text-sm  p-2 rounded-full flex flex-wrap items-center justify-center
+//                                     ${percentage<=60?"bg-amber-100 text-amber-500":"bg-green-100 text-green-600"}`}>{elem.Matchpercentage}% match</div>
+
+//                             </div>
+//                         </div>
+//                     )
+//                 })}
+//              </div>
+
+            
+//         </div>
+//     )
+// }
+// export default CandidatePipeline
 import React, { useState } from 'react'
+import Applied from './Pipeline_cards/Applied_pipeline'
+import Screening from './Pipeline_cards/Screening_pipeline'
+import Interview from './Pipeline_cards/Interview_pipeline'
+import Offer from './Pipeline_cards/Offered_pipeline'
+import Hire from './Pipeline_cards/Hired_pipeline'
 const CandidatePipeline=()=>{
 
     const AppliedCandidate=[
@@ -213,9 +512,17 @@ const CandidatePipeline=()=>{
             'Jobtype':'Sales manager',
             'Experience':'4',
             'MissingSkills':['react','html'],
-            'Matchpercentage':'25'
+            'Matchpercentage':'50'
     
-        }
+        },
+        {
+            'shortName':'BN',
+            'Name':"Bisma Noor",
+            'Jobtype':'Sales manager',
+            'Experience':'4',
+            'MissingSkills':['react','html'],
+            'Matchpercentage':'85'
+       }
      ]
     const  ScreenedCandidate=[
        
@@ -225,7 +532,7 @@ const CandidatePipeline=()=>{
             'Jobtype':'Sales manager',
             'Experience':'4',
             'MissingSkills':['react','html'],
-            'Matchpercentage':'25'
+            'Matchpercentage':'65'
         },
        {
             'shortName':'BN',
@@ -233,7 +540,7 @@ const CandidatePipeline=()=>{
             'Jobtype':'Sales manager',
             'Experience':'4',
             'MissingSkills':['react','html'],
-            'Matchpercentage':'25'
+            'Matchpercentage':'60'
        }
     ] 
 
@@ -245,7 +552,7 @@ const CandidatePipeline=()=>{
           'Jobtype':'Sales manager',
           'Experience':'4',
           'MissingSkills':['react','html'],
-          'Matchpercentage':'25'
+          'Matchpercentage':'85'
         },
         {
           'shortName':'TN',
@@ -253,7 +560,7 @@ const CandidatePipeline=()=>{
           'Jobtype':'Sales manager',
           'Experience':'4',
           'MissingSkills':['react','html'],
-          'Matchpercentage':'25'
+          'Matchpercentage':'70'
         }
     ]
     const OfferedCandidate=[
@@ -264,7 +571,7 @@ const CandidatePipeline=()=>{
             'Jobtype':'Sales manager',
             'Experience':'4',
             'MissingSkills':['react','html'],
-            'Matchpercentage':'25'
+            'Matchpercentage':'90'
          
         },
     ]
@@ -275,148 +582,136 @@ const CandidatePipeline=()=>{
             'Jobtype':'Sales manager',
             'Experience':'4',
             'MissingSkills':['react','html'],
-            'Matchpercentage':'25'
+            'Matchpercentage':'85'
          
         }
     ] 
     return(
-        <div className='w-full  flex gap-2 p-2 rounded-xl grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))]  '>
-             <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+        <div className="w-full overflow-x-auto overflow-y-hidden flex  gap-2 mb-40 md:mb-0">
+            <div className='w-[200px] shrink-0 px-2 py-4 flex  flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
                 <div>
-                    <h1 className='w-full font-bold text-[#6B7391] flex items-start justify-baseline'>Applied</h1>
+                    <h1 className='w-full font-bold text-[#1B2340] text-sm flex  items-start justify-baseline'>Applied</h1>
                 </div>
-               
                 {AppliedCandidate.map((elem,index)=>{
+                     const percentage=elem.Matchpercentage 
                     return(
-                        <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
-                            <div className='w-full flex flex-col gap-2 '>
-                               <div className='flex gap-2 items-center'>
-                                  <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
-                                  <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
-                               </div>
-                               <div className='w-full flex flex-col' >
-                                    <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
-                                        <h5>{elem.Jobtype}</h5>
-                                        <h5> .{elem.Experience}yrs</h5>
-                                    </div>
-                                    <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing: {elem.MissingSkills}</h5>
-                                </div>
-                                <div className='text-amber-500 font-bold text-sm bg-amber-100 p-2 rounded-full flex flex-wrap items-center justify-center'>{elem.Matchpercentage}% match</div>
-
-                            </div>
+                          
+                        <div key={index} className='w-full 
+                    
+                        '>
+                          <Applied  shortName={elem.shortName}
+                                     Name={elem.Name}
+                                     Jobtype={elem.Jobtype}
+                                     Experience={elem.Experience}
+                                     MissingSkills={elem.MissingSkills}
+                                     Matchpercentage={elem.Matchpercentage}
+                                     percentage={percentage}
+                          
+                          />
                         </div>
                     )
                 })}
-             </div>
+            </div>
              
-             <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+            <div className='  w-[200px] shrink-0 px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
                     <div>
-                        <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Screening</h1>
+                        <h1 className='w-full text-sm font-bold flex items-start justify-baseline text-[#1B2340]'>Screening</h1>
                     </div>
                 {ScreenedCandidate.map((elem,index)=>{
+                     const percentage=elem.Matchpercentage 
                     return(
-                        <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
-                            <div className='w-full flex flex-col gap-2 '>
-                               <div className='flex gap-2 items-center'>
-                                  <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
-                                  <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
-                               </div>
-                               <div className='w-full flex flex-col' >
-                                    <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
-                                        <h5>{elem.Jobtype}</h5>
-                                        <h5> .{elem.Experience}yrs</h5>
-                                    </div>
-                                    <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing: {elem.MissingSkills}</h5>
-                                </div>
-                                <div className='text-amber-500 font-bold text-sm bg-amber-100 p-2 rounded-full flex flex-wrap items-center justify-center'>{elem.Matchpercentage}% match</div>
-
-                            </div>
+                        <div key={index} className='w-full 
+                    
+                        '>
+                          <Screening  shortName={elem.shortName}
+                                     Name={elem.Name}
+                                     Jobtype={elem.Jobtype}
+                                     Experience={elem.Experience}
+                                     MissingSkills={elem.MissingSkills}
+                                     Matchpercentage={elem.Matchpercentage}
+                                     percentage={percentage}
+                          
+                          />
                         </div>
                     )
                 })}
-             </div>
+            </div>
           
-             <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+            <div className=' w-[200px] shrink-0 px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
                 <div>
-                    <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Interview</h1>
+                    <h1 className='w-full  text-sm font-bold flex items-start justify-baseline text-[#1B2340]'>Interview</h1>
                 </div>
                 {InterviewedCandidate.map((elem,index)=>{
+                     const percentage=elem.Matchpercentage 
                    return(
-                        <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
-                            <div className='w-full flex flex-col gap-2 '>
-                               <div className='flex gap-2 items-center'>
-                                  <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
-                                  <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
-                               </div>
-                               <div className='w-full flex flex-col' >
-                                    <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
-                                        <h5>{elem.Jobtype}</h5>
-                                        <h5> .{elem.Experience}yrs</h5>
-                                    </div>
-                                    <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing: {elem.MissingSkills}</h5>
-                                </div>
-                                <div className='text-amber-500 font-bold text-sm bg-amber-100 p-2 rounded-full flex flex-wrap items-center justify-center'>{elem.Matchpercentage}% match</div>
-
-                            </div>
+                        <div key={index} className='w-full 
+                    
+                        '>
+                          <Interview shortName={elem.shortName}
+                                     Name={elem.Name}
+                                     Jobtype={elem.Jobtype}
+                                     Experience={elem.Experience}
+                                     MissingSkills={elem.MissingSkills}
+                                     Matchpercentage={elem.Matchpercentage}
+                                     percentage={percentage}
+                          
+                            />
                         </div>
                     )
                 })}
-             </div>
-              <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+            </div>
+
+            <div className='w-[200px] shrink-0 px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
                 <div>
-                    <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Offered</h1>
+                    <h1 className='w-full text-sm font-bold flex items-start justify-baseline text-[#1B2340]'>Offered</h1>
                 </div>
                 {OfferedCandidate.map((elem,index)=>{
+                     const percentage=elem.Matchpercentage 
                     return(
-                        <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
-                            <div className='w-full flex flex-col gap-2 '>
-                               <div className='flex gap-2 items-center'>
-                                  <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
-                                  <h2 className='font-bold text-[#6B7391]'>{elem.Name}</h2>
-                               </div>
-                               <div className='w-full flex flex-col' >
-                                    <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
-                                        <h5>{elem.Jobtype}</h5>
-                                        <h5> .{elem.Experience}yrs</h5>
-                                    </div>
-                                    <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing: {elem.MissingSkills}</h5>
-                                </div>
-                                <div className='text-amber-500 font-bold text-sm bg-amber-100 p-2 rounded-full flex flex-wrap items-center justify-center'>{elem.Matchpercentage}% match</div>
-
-                            </div>
+                        <div key={index} className='w-full 
+                    
+                        '>
+                          <Offer  shortName={elem.shortName}
+                                     Name={elem.Name}
+                                     Jobtype={elem.Jobtype}
+                                     Experience={elem.Experience}
+                                     MissingSkills={elem.MissingSkills}
+                                     Matchpercentage={elem.Matchpercentage}
+                                     percentage={percentage}
+                          
+                          />
                         </div>
                     )
                 })}
-             </div>
-              <div className=' px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
+            </div>
+
+            <div className='w-[200px] shrink-0 px-2 py-4 flex flex-col gap-4 bg-[#ecedf1] border border-gray-200 rounded-xl'>
                 <div>
-                    <h1 className='w-full font-bold flex items-start justify-baseline text-[#6B7391]'>Hired</h1>
+                    <h1 className='w-full text-sm font-bold flex items-start justify-baseline text-[#1B2340]'>Hired</h1>
                 </div>
                 {HiredCandidate.map((elem,index)=>{
+                     const percentage=elem.Matchpercentage 
                     return(
-                        <div key={index} className='w-full p-2 bg-white border border-gray-200 rounded-xl flex flex-col gap-2'>
-                            <div className='w-full flex flex-col gap-2 '>
-                               <div className='flex gap-2 items-center'>
-                                  <h2 className='text-blue-800 font-bold text-sm bg-blue-200 p-2 rounded-full flex flex-wrap items-center justify-center' >{elem.shortName}</h2>
-                                  <h2 className='font-bold text-[#6B7391] text-sm'>{elem.Name}</h2>
-                               </div>
-                               <div className='w-full flex flex-col' >
-                                    <div className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>
-                                        <h5>{elem.Jobtype}</h5>
-                                        <h5> .{elem.Experience}yrs</h5>
-                                    </div>
-                                    <h5 className='flex flex-row w-full gap-2  text-[13px] text-gray-500'>Missing: {elem.MissingSkills}</h5>
-                                </div>
-                                <div className='text-amber-500 font-bold text-sm bg-amber-100 p-2 rounded-full flex flex-wrap items-center justify-center'>{elem.Matchpercentage}% match</div>
-
-                            </div>
+                        <div key={index} className='w-full 
+                    
+                        '>
+                          <Hire  shortName={elem.shortName}
+                                     Name={elem.Name}
+                                     Jobtype={elem.Jobtype}
+                                     Experience={elem.Experience}
+                                     MissingSkills={elem.MissingSkills}
+                                     Matchpercentage={elem.Matchpercentage}
+                                     percentage={percentage}
+                          
+                          />
                         </div>
                     )
                 })}
-             </div>
+            </div>
+        </div>
 
             
-        </div>
+    
     )
 }
 export default CandidatePipeline

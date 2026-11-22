@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import  { useContext } from 'react'
 import {useNavigate} from'react-router-dom'
-import { Company_Context_Profile } from '../Company_Context/Company_Context.jsx'
+import {Context} from '../Company_Context/Company_Context.jsx'
 import Logo from './Logo_Info.jsx'
 
 const Company_Info=()=>{
@@ -13,7 +13,7 @@ const Company_Info=()=>{
     const[link,setLink] =useState()
     const[about,setAbout] =useState()
 
-     const{active,setActive}=useContext(Company_Context_Profile)
+     const{active,setActive}=useContext(Context)
 
 
 //  sm:w-r-[59%] md:w-r-[67%]
