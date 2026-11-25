@@ -6,12 +6,13 @@ import { LayoutDashboard, UserRound, Sparkles, BuildingComplex, Star, Bot, Arrow
 import AdminOverview from './Admin Overview/AdminOverview'
 import AdminModerate from './AdminModerate/AdminModerate'
 import Admincompanies from './Admincompanies/Admincompanies.jsx'
+import AdminJobseeker from './AdminJobseeker/AdminJobseeker.jsx'
 const SidebarAdmin = () => {
     const navigate = useNavigate()
     const [active, setactive] = useState("Overview")
     const [tab, settab] = useState("Overview")
     const menu =
-        // ['◧     Overview', "✦   Moderate", "☺   Company", "★   Jobseeker", "✦   AI Agent", "☻   Profile", "←   Website", "⇥   Logout"]
+        // ['◧     Overview', "✦   Moderate", "☺   Company", "★   Job seekers", "✦   AI Agent", "☻   Profile", "←   Website", "⇥   Logout"]
         [
 
             // { name: "Overview", icon: '◧' },
@@ -28,7 +29,7 @@ const SidebarAdmin = () => {
             { name: "Moderate", icon: <Sparkles size={17} strokeWidth={1.5} /> },
             { name: "Companies", icon: <BuildingComplex size={17} strokeWidth={1.5} /> },
             // { name: "Jobseeker", icon: <Star size={17} strokeWidth={1.5} /> },
-            { name: "Jobseeker", icon: <UserSearch size={16} strokeWidth={1.5} /> },
+            { name: "Job seekers", icon: <UserSearch size={16} strokeWidth={1.5} /> },
 
 
             { name: "AI Agent", icon: <Bot size={17} strokeWidth={1.5} /> },
@@ -80,6 +81,9 @@ const SidebarAdmin = () => {
             </div>
             <div className={`${tab === "Companies" ? "flex flex-col md:ml-60 w-full" : "hidden"}`}>
                 <Admincompanies />
+            </div>
+            <div className={`${tab === "Job seekers" ? "flex flex-col md:ml-60 w-full" : "hidden"}`}>
+                <AdminJobseeker />
             </div>
         </div>
     )

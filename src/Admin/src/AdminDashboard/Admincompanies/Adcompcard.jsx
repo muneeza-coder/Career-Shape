@@ -204,89 +204,332 @@
 // }
 
 // export default Adcompcard 
-import React, { useState } from 'react'
+// import React, { useContext, useState } from 'react'
+// import { AdminContexts } from '../AdminContext'
+// const Adcompcard = () => {
+//     const { allcards, setallcards, verfied, setverified, showCards, setshowCards, pending, setpending, rejected, setrejected } = useContext(AdminContexts)
 
+//     const [list, setlist] = useState(
+//         [
+//             { "Name": "BrightLayer Ltd", "jobs": 3, "profile": "Complete", "status": "Pending", "AIhint": "Looks complete" },
+//             { "Name": "QuickHire Co", "jobs": 12, "profile": "Missing", "status": "Pending", "AIhint": " Needs manual review" },
+//             { "Name": "Nova Studio", "jobs": 4, "profile": "Complete", "status": "Verified", "AIhint": "Looks complete" },
+//             { "Name": "Peak", "jobs": 2, "profile": "Complete", "status": "Pending", "AIhint": " Looks complete" }
+
+//         ]
+
+//     )
+//     setallcards(list.length)
+
+//     list.map((el) => {
+//         if (el.status === "Pending") {
+//             setpending(3)
+//         }
+//         else if (el.status === "Verified") {
+//             setverified(4)
+//         }
+//         else {
+//             if (el.status === "Rejected") {
+//                 setrejected(5)
+//             }
+//         }
+//     })
+
+//     return (
+//         <div className="w-full  grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4  justify-between ">
+//             {list.map((el, indx) => {
+//                 const checkStatus = list[el.status]
+
+//                 return <div className="gap-4 p-5 h-[290px] bg-white w-full border border-gray-200 rounded-xl flex gap-3 flex-col">
+//                     <div className="flex justify-between">
+//                         <div className="flex gap-3">
+//                             {/* <div className="px-4 py-3 rounded-2xl bg-[#E8ECFF] text-[#3D5AFE] text-lg font-bold ">
+//                                 {el.Name.at(0)}{el.Name.charAt(el.Name.indexOf(" ") + 1)}
+//                             </div> */}
+//                             <div className="px-4 py-3 rounded-2xl bg-[#E8ECFF] text-[#3D5AFE] text-lg font-bold ">
+//                                 {el.Name.at(0)}{el.Name.includes(" ") ? el.Name.charAt(el.Name.lastIndexOf(" ") + 1) : ""}
+//                             </div>
+//                             <div className="flex flex-col">
+//                                 <h5 className="text-lg text-[#1B2340] font-bold flex flex-wrap ">{el.Name}</h5>
+//                                 <p className="text-xs text-[#6B7391]">Company account</p>
+//                             </div>
+//                         </div>
+//                         <div className="flex gap-2 h-8 bg-[#E8ECFF] rounded-full px-2 py-1 justify-between items-center">
+//                             <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
+//                             <h6 className="text-xs font-semibold text-[#1B2340]">{el.status}</h6>
+//                         </div>
+//                     </div>
+//                     <div className="flex gap-2 ">
+//                         <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
+//                             <h6 className="text-lg font-bold text-[#1B2340] ">{el.jobs}</h6>
+//                             <p className="text-xs text-[#6B7391]" >Jobs posted</p>
+//                         </div>
+//                         <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
+
+//                             <h6 className="text-lg font-bold text-[#1B2340]">{el.profile}</h6>
+//                             <p className="text-xs text-[#6B7391]">Documents</p>
+//                         </div>
+//                     </div>
+//                     <div className="flex gap-2  items-center">
+//                         <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
+//                         <p className="text-xs text-[#6B7391]">AI hint (demo): {el.AIhint}</p>
+//                     </div>
+//                     <div className={`flex justify-between gap-2 ${el.status === "Verified" || el.status === "Rejected" ? "hidden" : "flex"}`}>
+//                         <button onClick={() => {
+//                             const newList = [...list];
+//                             newList[indx].status = "Rejected";
+//                             setlist(newList);
+//                         }} className="flex justify-center items-center py-3 rounded-xl bg-[#E8ECFF] text-[#3D5AFE] text-sm font-bold w-full">
+//                             Reject
+//                         </button>
+//                         <button onClick={() => {
+//                             const newList = [...list]
+//                             newList[indx].status = "Verified"
+//                             setlist(newList)
+//                         }}
+//                             className={`flex justify-center items-center py-3 rounded-xl text-white bg-[#3D5AFE] text-sm font-bold w-full `}>
+//                             Approve
+//                         </button>
+//                     </div>
+//                     <button onClick={() => {
+//                         const newList = [...list]
+//                         newList[indx].status = "Pending"
+//                         setlist(newList)
+//                     }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Verified" ? "flex" : "hidden"}`}>Revoke Approval</button>
+//                     <button onClick={() => {
+//                         const newList = [...list]
+//                         newList[indx].status = "Pending"
+//                         setlist(newList)
+//                     }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Rejected" ? "flex" : "hidden"}`}>Review Again</button>
+
+//                 </div>
+
+
+//             })}
+//         </div>
+//     )
+// }
+
+// export default Adcompcard
+// import React, { useContext, useState, useEffect } from 'react'
+// import { AdminContexts } from '../AdminContext'
+// const Adcompcard = () => {
+//     const { allcards, setallcards, verfied, setverified, showCards, setshowCards, pending, setpending, rejected, setrejected } = useContext(AdminContexts)
+
+//     const [list, setlist] = useState(
+//         [
+//             { "Name": "BrightLayer Ltd", "jobs": 3, "profile": "Complete", "status": "Pending", "AIhint": "Looks complete" },
+//             { "Name": "QuickHire Co", "jobs": 12, "profile": "Missing", "status": "Pending", "AIhint": " Needs manual review" },
+//             { "Name": "Nova Studio", "jobs": 4, "profile": "Complete", "status": "Verified", "AIhint": "Looks complete" },
+//             { "Name": "Peak", "jobs": 2, "profile": "Complete", "status": "Pending", "AIhint": " Looks complete" }
+
+//         ]
+
+//     )
+//     setallcards(list.length)
+
+//     useEffect(() => {
+//         setallcards(list.length);
+
+//         setpending(list.filter(el => el.status === "Pending").length);
+
+//         setverified(list.filter(el => el.status === "Verified").length);
+
+//         setrejected(list.filter(el => el.status === "Rejected").length);
+
+//     }, [list]);
+
+
+//     return (
+//         // <div className={`w-full  grid   gap-4  justify-between`}>
+//         <div className={`flex flex-col w-full lg:grid lg:grid-cols-2 xl:grid-cols-3  gap-4  md:justify-center lg:justify-between `}>
+
+//             {list.map((el, indx) => {
+//                 const checkStatus = list[el.status]
+
+//                 return <div className={`gap-4 p-5 h-[290px]  bg-white w-full border border-gray-200 rounded-xl  flex gap-3 flex-col ${showCards === "all" ? "flex " : showCards === el.status ? "flex" : "hidden"}`}>
+//                     <div className="flex justify-between">
+//                         <div className="flex gap-3">
+//                             {/* <div className="px-4 py-3 rounded-2xl bg-[#E8ECFF] text-[#3D5AFE] text-lg font-bold ">
+//                                 {el.Name.at(0)}{el.Name.charAt(el.Name.indexOf(" ") + 1)}
+//                             </div> */}
+//                             <div className="px-4 py-3 rounded-2xl bg-[#E8ECFF] text-[#3D5AFE] text-lg font-bold ">
+//                                 {el.Name.at(0)}{el.Name.includes(" ") ? el.Name.charAt(el.Name.lastIndexOf(" ") + 1) : ""}
+//                             </div>
+//                             <div className="flex flex-col">
+//                                 <h5 className="text-lg text-[#1B2340] font-bold flex flex-wrap ">{el.Name}</h5>
+//                                 <p className="text-xs text-[#6B7391]">Company account</p>
+//                             </div>
+//                         </div>
+//                         <div className="flex gap-2 h-8 bg-[#E8ECFF] rounded-full px-2 py-1 justify-between items-center">
+//                             <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
+//                             <h6 className="text-xs font-semibold text-[#1B2340]">{el.status}</h6>
+//                         </div>
+//                     </div>
+//                     <div className="flex gap-2 ">
+//                         <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
+//                             <h6 className="text-lg font-bold text-[#1B2340] ">{el.jobs}</h6>
+//                             <p className="text-xs text-[#6B7391]" >Jobs posted</p>
+//                         </div>
+//                         <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
+
+//                             <h6 className="text-lg font-bold text-[#1B2340]">{el.profile}</h6>
+//                             <p className="text-xs text-[#6B7391]">Documents</p>
+//                         </div>
+//                     </div>
+//                     <div className="flex gap-2  items-center">
+//                         <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
+//                         <p className="text-xs text-[#6B7391]">AI hint (demo): {el.AIhint}</p>
+//                     </div>
+//                     <div className={`flex justify-between gap-2 ${el.status === "Verified" || el.status === "Rejected" ? "hidden" : "flex"}`}>
+//                         <button onClick={() => {
+//                             const newList = [...list];
+//                             newList[indx].status = "Rejected";
+//                             setlist(newList);
+//                         }} className="flex justify-center items-center py-3 rounded-xl bg-[#E8ECFF] text-[#3D5AFE] text-sm font-bold w-full">
+//                             Reject
+//                         </button>
+//                         <button onClick={() => {
+//                             const newList = [...list]
+//                             newList[indx].status = "Verified"
+//                             setlist(newList)
+//                         }}
+//                             className={`flex justify-center items-center py-3 rounded-xl text-white bg-[#3D5AFE] text-sm font-bold w-full `}>
+//                             Approve
+//                         </button>
+//                     </div>
+//                     <button onClick={() => {
+//                         const newList = [...list]
+//                         newList[indx].status = "Pending"
+//                         setlist(newList)
+//                     }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Verified" ? "flex" : "hidden"}`}>Revoke Approval</button>
+//                     <button onClick={() => {
+//                         const newList = [...list]
+//                         newList[indx].status = "Pending"
+//                         setlist(newList)
+//                     }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Rejected" ? "flex" : "hidden"}`}>Review Again</button>
+
+//                 </div>
+
+
+//             })}
+//             <div className={`${rejected === 0 || pending === 0 || verfied === 0 || allcards === 0 ? "flex bg-blue-800" : "hidden"}`}>
+
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default Adcompcard
+import React, { useContext, useState, useEffect } from 'react'
+import { AdminContexts } from '../AdminContext'
 const Adcompcard = () => {
+    const { searchComp, setsearchComp, allcards, setallcards, verfied, setverified, showCards, setshowCards, pending, setpending, rejected, setrejected } = useContext(AdminContexts)
+
     const [list, setlist] = useState(
         [
             { "Name": "BrightLayer Ltd", "jobs": 3, "profile": "Complete", "status": "Pending", "AIhint": "Looks complete" },
-            { "Name": "QuickHire Co", "jobs": 12, "profile": "Logo missing", "status": "Pending", "AIhint": " Needs manual review" },
+            { "Name": "QuickHire Co", "jobs": 12, "profile": "Missing", "status": "Pending", "AIhint": " Needs manual review" },
             { "Name": "Nova Studio", "jobs": 4, "profile": "Complete", "status": "Verified", "AIhint": "Looks complete" },
             { "Name": "Peak", "jobs": 2, "profile": "Complete", "status": "Pending", "AIhint": " Looks complete" }
 
         ]
-    )
-    const list2 = []
-    return (
-        <div className="w-full  grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4  justify-between ">
-            {list.map((el, indx) => {
-                const checkStatus = list[el.status]
-                return <div className="gap-4 p-5 h-[290px] bg-white w-full border border-gray-200 rounded-xl flex gap-3 flex-col">
-                    <div className="flex justify-between">
-                        <div className="flex gap-3">
-                            {/* <div className="px-4 py-3 rounded-2xl bg-[#E8ECFF] text-[#3D5AFE] text-lg font-bold ">
-                                {el.Name.at(0)}{el.Name.charAt(el.Name.indexOf(" ") + 1)}
-                            </div> */}
-                            <div className="px-4 py-3 rounded-2xl bg-[#E8ECFF] text-[#3D5AFE] text-lg font-bold ">
-                                {el.Name.at(0)}{el.Name.includes(" ") ? el.Name.charAt(el.Name.lastIndexOf(" ") + 1) : ""}
-                            </div>
-                            <div className="flex flex-col">
-                                <h5 className="text-lg text-[#1B2340] font-bold">{el.Name}</h5>
-                                <p className="text-xs text-[#6B7391]">Company account</p>
-                            </div>
-                        </div>
-                        <div className="flex gap-2 h-8 bg-[#E8ECFF] rounded-full px-2 py-1 justify-between items-center">
-                            <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
-                            <h6 className="text-xs font-semibold text-[#1B2340]">{el.status}</h6>
-                        </div>
-                    </div>
-                    <div className="flex gap-2 ">
-                        <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
-                            <h6 className="text-lg font-bold text-[#1B2340]">{el.jobs}</h6>
-                            <p className="text-xs text-[#6B7391]" >Jobs posted</p>
-                        </div>
-                        <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
 
-                            <h6 className="text-lg font-bold text-[#1B2340]">{el.profile}</h6>
-                            <p className="text-xs text-[#6B7391]">Documents</p>
+    )
+
+    useEffect(() => {
+        setallcards(list.length);
+
+        setpending(list.filter(el => el.status === "Pending").length);
+
+        setverified(list.filter(el => el.status === "Verified").length);
+
+        setrejected(list.filter(el => el.status === "Rejected").length);
+
+    }, [list]);
+
+    const filterList = list.filter(el =>
+        showCards === "all" || showCards === el.status || searchComp === el.Name
+    )
+    console.log(filterList)
+    const lowershowcards = showCards.toLowerCase()
+    return (
+        // <div className={`w-full  grid   gap-4  justify-between`}>
+        <div className="flex flex-col">
+            {filterList.length === 0 || && (
+                <p className="h-[200px] text-[#6B7391] rounded-xl text-lg  w-full flex items-center justify-center bg-white border border-gray-200">No {lowershowcards} companies available</p>
+            )}
+            <div className={`flex flex-col w-full lg:grid lg:grid-cols-2 xl:grid-cols-3  gap-4  md:justify-center lg:justify-between `}>
+
+                {filterList.map((el, indx) => {
+                    const checkStatus = list[el.status]
+
+                    return <div className={`gap-4 p-5 h-[290px]  bg-white w-full border border-gray-200 rounded-xl  flex gap-3 flex-col`}>
+                        <div className="flex justify-between">
+                            <div className="flex gap-3">
+                                <div className="px-4 py-3 rounded-2xl bg-[#E8ECFF] text-[#3D5AFE] text-lg font-bold ">
+                                    {el.Name.at(0)}{el.Name.includes(" ") ? el.Name.charAt(el.Name.lastIndexOf(" ") + 1) : ""}
+                                </div>
+                                <div className="flex flex-col">
+                                    <h5 className="text-lg text-[#1B2340] font-bold flex flex-wrap ">{el.Name}</h5>
+                                    <p className="text-xs text-[#6B7391]">Company account</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-2 h-8 bg-[#E8ECFF] rounded-full px-2 py-1 justify-between items-center">
+                                <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
+                                <h6 className="text-xs font-semibold text-[#1B2340]">{el.status}</h6>
+                            </div>
                         </div>
-                    </div>
-                    <div className="flex gap-2  items-center">
-                        <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
-                        <p className="text-xs text-[#6B7391]">AI hint (demo): {el.AIhint}</p>
-                    </div>
-                    <div className={`flex justify-between gap-2 ${el.status === "Verified" || el.status === "Rejected" ? "hidden" : "flex"}`}>
-                        <button onClick={() => {
-                            const newList = [...list];
-                            newList[indx].status = "Rejected";
-                            setlist(newList);
-                        }} className="flex justify-center items-center py-3 rounded-xl bg-[#E8ECFF] text-[#3D5AFE] text-sm font-bold w-full">
-                            Reject
-                        </button>
+                        <div className="flex gap-2 ">
+                            <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
+                                <h6 className="text-lg font-bold text-[#1B2340] ">{el.jobs}</h6>
+                                <p className="text-xs text-[#6B7391]" >Jobs posted</p>
+                            </div>
+                            <div className=" rounded-xl bg-gray-100 w-full h-20 gap-3 px-3 py-4">
+
+                                <h6 className="text-lg font-bold text-[#1B2340]">{el.profile}</h6>
+                                <p className="text-xs text-[#6B7391]">Documents</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-2  items-center">
+                            <div className={`w-2 h-2 rounded-full ${el.status === "Pending" ? "bg-[#E39A12]" : el.status === "Verified" ? "bg-[#16B890]" : "bg-[#E5484D]"}`}></div>
+                            <p className="text-xs text-[#6B7391]">AI hint (demo): {el.AIhint}</p>
+                        </div>
+                        <div className={`flex justify-between gap-2 ${el.status === "Verified" || el.status === "Rejected" ? "hidden" : "flex"}`}>
+                            <button onClick={() => {
+                                const newList = [...list];
+                                newList[indx].status = "Rejected";
+                                setlist(newList);
+                            }} className="flex justify-center items-center py-3 rounded-xl bg-[#E8ECFF] text-[#3D5AFE] text-sm font-bold w-full">
+                                Reject
+                            </button>
+                            <button onClick={() => {
+                                const newList = [...list]
+                                newList[indx].status = "Verified"
+                                setlist(newList)
+                            }}
+                                className={`flex justify-center items-center py-3 rounded-xl text-white bg-[#3D5AFE] text-sm font-bold w-full `}>
+                                Approve
+                            </button>
+                        </div>
                         <button onClick={() => {
                             const newList = [...list]
-                            newList[indx].status = "Verified"
+                            newList[indx].status = "Pending"
                             setlist(newList)
-                        }}
-                            className={`flex justify-center items-center py-3 rounded-xl text-white bg-[#3D5AFE] text-sm font-bold w-full `}>
-                            Approve
-                        </button>
+                        }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Verified" ? "flex" : "hidden"}`}>Revoke Approval</button>
+                        <button onClick={() => {
+                            const newList = [...list]
+                            newList[indx].status = "Pending"
+                            setlist(newList)
+                        }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Rejected" ? "flex" : "hidden"}`}>Review Again</button>
+
                     </div>
-                    <button onClick={() => {
-                        const newList = [...list]
-                        newList[indx].status = "Pending"
-                        setlist(newList)
-                    }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Verified" ? "flex" : "hidden"}`}>Revoke Approval</button>
-                    <button onClick={() => {
-                        const newList = [...list]
-                        newList[indx].status = "Pending"
-                        setlist(newList)
-                    }} className={`w-full py-3 items-center bg-[#E8ECFF] text-[#3D5AFE] justify-center font-bold rounded-xl ${el.status === "Rejected" ? "flex" : "hidden"}`}>Review Again</button>
-
-                </div>
 
 
-            })}
+                })}
+
+            </div>
+
         </div>
     )
 }
