@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
 import {Context} from '../../../Company_Context/Company_Context.jsx'
-
+import Requirement from './Requirements.jsx'
 const Employment_detail=()=>{
     
- 
+   const{ai_curr_act,setAi_curr_act}=useContext(Context)
    const{city,setCity}=useContext(Context)
    const{emp_type,setEmp_type}=useContext(Context)
-
+   const[btnactive,setBtnactive]=useState(null)
     const employment_type=[
         {
             'Name':['Full-time','Part-time','Contract','Internship'
@@ -52,8 +52,13 @@ const Employment_detail=()=>{
                            )
                         })}
                     </div>
-                    <div className='flex justify-end items-end'>
-                        <button className='flex items-center py-3 px-5  font-semibold rounded-xl bg-[#3D5AFE] text-white'>Next</button>
+                    <div className='flex justify-between items-center'>
+                         <button className='flex items-center py-3 px-5  font-semibold rounded-xl bg-[#E8ECFF]  text-[#3D5AFE]'
+                           onClick={()=>setAi_curr_act('Job basics')}
+                         >Back</button>
+                        <button className='flex items-center py-3 px-5  font-semibold rounded-xl bg-[#3D5AFE] text-white'
+                          onClick={()=>setAi_curr_act('Requirements')}
+                        >Next</button>
                     </div>
                     
                 </div>

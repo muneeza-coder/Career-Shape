@@ -3,7 +3,7 @@ import { Context } from '../../Company_Context/Company_Context.jsx'
 import Employment_detail from './Cards/Employment_details.jsx'
 const JobBasic=()=>{
     const[btnactive,setBtnactive]=useState(null)
-     const{currrent_active,setCurrent_active}=useContext(Context)
+     const{ai_curr_act,setAi_curr_act}=useContext(Context)
    const{dep,setDep}=useContext(Context)
    const{job,setJob}=useContext(Context)
     const deplist=[
@@ -55,8 +55,8 @@ const JobBasic=()=>{
                     </div>
                     <div className='flex justify-end items-end'>
                         <button className='flex items-center py-3 px-5  font-semibold rounded-xl bg-[#3D5AFE] text-white'
-                          onClick={
-                            setCurrent_active('Employment_detail')
+                          onClick={()=>
+                            setAi_curr_act('employment_detail')
                             
                           }
                         >Next</button>
