@@ -2,7 +2,7 @@ import React from 'react'
 
 const Overview = () => {
   return (
-    <div className="w-full h-full flex flex-col gap-3 ml-7 mt-22 pr-5 mb-5">
+    <div className="w-full flex flex-col gap-3 ml-7 mt-22 pr-5 mb-45 ">
     {/* <div>
     <div>Demo view:</div>
     <label className="text-sm font-bold text-[#1B2340]"></label>
@@ -46,23 +46,43 @@ const Overview = () => {
 
 
     </div>
-    <div className='bg-white rounded-xl border flex flex-col  border-gray-300 px-5 py-8 gap-5  '>
-<div className='font-bold text-black'>✨Recommended for you
-  <hr className="border-t border-gray-300" />
+    <div className='bg-white  rounded-xl border flex flex-col  border-gray-300 px-5 py-8 gap-5 '>
+      <div className='px-2 w-full items-center flex justify-between border-b py-2 border-gray-300'>
+  <div className='flex flex-col'>
+    <h3 className='font-bold text-black '>✨Recommended for you</h3>
+  
+  </div>
+  <p className='text-sm font-normal text-blue-500 rounded-full bg-blue-200 px-2 py-1'>Demo AI result</p>
 </div>
-<div className='font-bold text-black'>Frontend Developer
+{/* <div className='font-bold text-black'>✨Recommended for you
+  <hr className="border-t border-gray-300" />
+</div> */}
+<div className='px-2 w-full items-center flex justify-between border-b py-1 border-gray-300'>
+  <div className='flex flex-col'>
+    <h3 className='font-bold text-black'>Frontend Developer</h3>
   <h3 className="  text-[#6B7391]  text-sm font-medium">Skill to build:react</h3>
-  <hr className="border-t border-gray-300" />
+  </div>
+  <p className='font-extrabold text-red-500 rounded-full bg-red-300 text-xs px-2 py-1'>0%</p>
 </div>
-<div className='font-bold text-black'>Product Designer
+<div className='px-2 w-full items-center flex justify-between border-b py-1 border-gray-300'>
+  <div className='flex flex-col'>
+    <h3 className='font-bold text-black'>Product Designer</h3>
   <h3 className="  text-[#6B7391]  text-sm font-medium">Skill to build:figma</h3>
-  <hr className="border-t border-gray-300" />
+  </div>
+  <p className='font-extrabold text-red-500 rounded-full bg-red-300 text-xs px-2 py-1'>0%</p>
+</div>
+<div className='px-2 w-full items-center flex justify-between border-b py-1 border-gray-300'>
+  <div className='flex flex-col'>
+    <h3 className='font-bold text-black'>Sales Manager</h3>
+  <h3 className="  text-[#6B7391]  text-sm font-medium">Skill to build:negotiation</h3>
+  </div>
+  <p className='font-extrabold text-red-500 rounded-full bg-red-300 px-2 text-xs py-1'>0%</p>
 </div>
 
-<div className='font-bold text-black'>Sales Manager
+{/* <div className='font-bold text-black '>Sales Manager
   <h3 className="  text-[#6B7391]  text-sm font-medium ">Skill to build:negotiation</h3>
 
-</div>
+</div> */}
     </div>
     </div>
     

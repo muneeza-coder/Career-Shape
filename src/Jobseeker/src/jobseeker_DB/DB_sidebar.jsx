@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import logo from '../../../assets/logo1.svg'
 import { LayoutDashboard, ClipboardList, PanelsTopLeft, CircleUserRound, Check, CircleUser, ArrowLeft, LogOut } from "lucide-react"
 import Overview from './Overview'
+import Jobs from './Jobs'
+import CV from './CV'
+import Applied from './Applied'
+import Result from './Result'
+import Profile from './Profile'
 const DB_sidebar = () => {
      const [click,setClick]=useState('Overview')
         const [Tab,setTab]=useState("Overview")
@@ -61,20 +66,25 @@ const DB_sidebar = () => {
                 
             
             </div>  
-          <div className={`${Tab==='Overview'?" flex w-full md:ml-60":"hidden"}`} >
+          <div className={`${Tab==='Overview'?" flex w-full md:ml-60  ":"hidden"}`} >
                 <Overview />
              </div>
-              {/* <div className={`${Tab==='Overview'?" flex w-full md:ml-60":"hidden"}`}>
-                    <Overview/>
+              <div className={`${Tab==='Jobs'?" flex w-full md:ml-60":"hidden"}`}>
+                    <Jobs/>
             </div>
-            <div className={`${Tab==='Candidates'?" flex w-full md:ml-60":"hidden"}`}>
-                    <Candidates/>
+            <div className={`${Tab==='CV'?" flex w-full md:ml-60":"hidden"}`}>
+                    <CV/>
              </div>
-            <div className={`${Tab==='Jobs'?" flex w-full md:ml-60":"hidden"}`}>
-                  <Jobs/>
-            </div> */}
+            <div className={`${Tab==='Applied'?" flex w-full md:ml-60":"hidden"}`}>
+                  <Applied/>
+            </div>
                 
-            
+             <div className={`${Tab==='Result'?" flex w-full md:ml-60":"hidden"}`}>
+                  <Result/>
+            </div>
+              <div className={`${Tab==='Profile'?" flex w-full md:ml-60":"hidden"}`}>
+                  <Profile/>
+            </div>
             
             
         </div>
